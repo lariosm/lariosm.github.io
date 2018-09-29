@@ -1,0 +1,31 @@
+.heading {
+  background-color: green;
+  margin-bottom: 0;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border: none;
+}
+
+nav li {
+  color: #ffffff;
+}
+
+#content {
+  background-color: #ffffff;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+body {
+  background-color: #fc7676;
+}
+
+nav {
+  display: flex;
+}
+
+nav li {
+  color: #ffffff;
+}
