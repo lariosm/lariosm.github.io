@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Manuel's Place</title>
+    <title>Bucket list</title>
     <!--Metadata tag-->
     <meta charset="utf-8">
     <!--Bootstrap CSS-->
@@ -11,21 +11,19 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container-fullwidth">
       <div class="heading">
         <h1>Manuel's Place</h1>
       </div>
-    </div>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-inverse" style="background-color: #4268f4;">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <ul class="navbar-nav">
-          <li class="active nav-item">
+          <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="gallery.html">Gallery</a>
           </li>
-          <li class="nav-item">
+          <li class="active nav-item">
             <a class="nav-link" href="bucketlist.html">Bucket List</a>
           </li>
           <li class="nav-item">
@@ -34,11 +32,54 @@
         </ul>
       </nav>
     </div>
-    <div class="container" id="content">
-        <p>
-          Looks like this is my spot on the internet. I haven't decided what to put up in my home page.
-          I do, however, have other pages you can check out while you're here.
-        </p>
+    <div class="container">
+      <div class="content">
+        <h2>Bucket list</h2>
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Comments/Notes</th>
+            <th>Probability</th>
+          </tr>
+          <tr>
+            <td>Skydiving</td>
+            <td>I'll probably do it at 3,500 feet over flat terrain.</td>
+            <td>5%<br>(Yeah, right!)</td>
+          </tr>
+          <tr>
+            <td>Traveling the world</td>
+            <td>
+              Hoping to at least visit the following (in no particular order):
+              <ul>
+                <li>Mexico</li>
+                <li>Hawaii</li>
+                <li>Spain</li>
+                <li>England</li>
+                <li>Japan</li>
+              </ul>
+            </td>
+            <td>48%</td>
+          </tr>
+          <tr>
+            <td>Attending a FIFA world cup game</td>
+            <td>Hoping to attend at least one group stage, one quarter-final and (probably) the final.</td>
+            <td>82%</td>
+          </tr>
+          <tr>
+            <td>Participating in a bull run</td>
+            <td>Wish me luck!</td>
+            <td>33%</td>
+          </tr>
+          <tr>
+            <td>Creating a smart home</td>
+            <td>
+              My ideal smart home world have smart lights, eletrical outlets, appliances, thermostat, TV
+              and sound system that responds to either Alexa or Google.
+            </td>
+            <td>93%</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </body>
 </html>

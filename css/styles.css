@@ -1,31 +1,34 @@
-.heading {
-  background-color: green;
-  margin-bottom: 0;
-}
-
-.navbar {
-  margin-bottom: 0;
-  border: none;
-}
-
-nav li {
-  color: #ffffff;
-}
-
-#content {
-  background-color: #ffffff;
-  margin-top: 10px;
-  padding: 20px;
-}
-
 body {
   background-color: #fc7676;
 }
 
-nav {
-  display: flex;
+nav li {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-nav li {
-  color: #ffffff;
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    text-align: left;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.container-fullwidth {
+  background-color: blue;
+}
+
+.content {
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-top: 10px;
+  padding: 20px;
 }
