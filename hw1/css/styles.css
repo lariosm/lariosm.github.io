@@ -2,6 +2,10 @@ body {
   background-color: #3884ff;
 }
 
+h1 {
+  font-weight: bold;
+}
+
 nav li {
   padding-left: 10px;
   padding-right: 10px;
@@ -36,6 +40,7 @@ img {
 .content {
   border-radius: 10px;
   background-color: #ffffff;
-  margin-top: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   padding: 20px;
 }
