@@ -146,4 +146,4 @@ Soon after that, I've decided to create a subfolder called ```imgs``` within my 
 
 In the end, through trial and error, I've managed to create a decent-looking website within the given timeframe. It probably wasn't how I envisioned it, but several elements from my sketches were there and I'm happy with it so far.
 
-![gallery page](https://github.com/mlarios1/mlarios1.github.io/blob/master/CS460/HW1/hw1.png)
+![gallery page](https://mlarios1.github.io/mlarios1.github.io/CS460/HW1/hw1.png)
