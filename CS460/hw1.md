@@ -145,3 +145,6 @@ As I was working on this assignment, I later realized that if I wanted to add fi
 Soon after that, I've decided to create a subfolder called ```imgs``` within my ```hw1``` subdirectory to store any image-related files rather than mix them with HTML files.
 
 In the end, through trial and error, I've managed to create a decent-looking website within the given timeframe. It probably wasn't how I envisioned it, but several elements from my sketches were there and I'm happy with it so far.
+
+
+![gallery page](https://github.com/mlarios1/mlarios1.github.io/blob/master/CS460/hw1.png)
