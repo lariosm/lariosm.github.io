@@ -1,48 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Manuel's Place</title>
-    <!--Metadata tags-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Bootstrap CSS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <!--My CSS file-->
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
+<head>
+  <title>Manuel's Place</title>
+  <!--Metadata tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <!--My CSS file-->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
-  <body>
-    <div class="container-fullwidth">
-      <div class="heading">
-        <h1>Manuel's Place</h1>
-      </div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <ul class="navbar-nav">
-          <li class="active nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="bucketlist.html">Bucket list</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-        </ul>
-      </nav>
+<body>
+  <div class="container-fullwidth">
+    <div class="heading">
+      <h1></h1>
     </div>
-    <div class="container">
-      <div class="content">
-        <h2>Hey there!</h2>
-        <p>
-          Welcome to my website! Well, at least the directory where this is
-          hosted at. I haven't thought about what I'm going to put up in my home
-          page. While you're here, why not have a look around at my other web
-          pages, such as my photo gallery, my bucket list and my about page.
-        </p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <ul class="navbar-nav">
+        <li class="active nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Help</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="content">
+      <h2></h2>
+      <div class="row">
+        <div class="col-sm-4">
+          <p>Step 1: Enter an amount</p>
+          <label>$</label>
+          <input type="number" min="0" placeholder="0.00" step="0.01">
+        </div>
+        <div class="col-sm-4">
+          <p>Step 2: How do you want your change?</p>
+          <input type="radio"  id="lg-change" name="change-radio-option" checked="checked">
+          <label>Largest possible</label>
+          <br>
+          <input type="radio" id="custom-change" name="change-radio-option">
+          <label>Custom</label>
+          <div class="row" id="change-cbox-group">
+            <div class="col-sm-6">
+              <input type="checkbox" id="hundred" name="bills">
+              <label>$100 bills</label>
+              <br>
+              <input type="checkbox" id="fifty" name="bills">
+              <label>$50 bills</label>
+              <br>
+              <input type="checkbox" id="twenty" name="bills">
+              <label>$20 bills</label>
+              <br>
+              <input type="checkbox" id="ten" name="bills">
+              <label>$10 bills</label>
+              <br>
+              <input type="checkbox" id="five" name="bills">
+              <label>$50 bills</label>
+              <br>
+              <input type="checkbox" id="one" name="bills">
+              <label>$1 bills</label>
+            </div>
+            <div class="col-sm-6">
+              <input type="checkbox" id="quarter" name="coins">
+              <label>Quarters</label>
+              <br>
+              <input type="checkbox" id="dime" name="coins">
+              <label>Dimes</label>
+              <br>
+              <input type="checkbox" id="nickel" name="coins">
+              <label>Nickels</label>
+              <br>
+              <input type="checkbox" id="penny" name="coins">
+              <label>Pennies</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <p>Step 3: Calculate your change</p>
+          <button id="calculate">Calculate</button>
+          <br>
+          <label>OR</label>
+          <br>
+          <button id="clear">Start over</button>
+        </div>
+      </div>
+      <div class="row" id="table-change">
+        <!-- CHANGE TABLE TO BE DISPLAYED HERE -->
       </div>
     </div>
   </body>
-</html>
+  </html>
