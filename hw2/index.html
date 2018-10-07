@@ -34,49 +34,40 @@
         <div class="col-sm-4">
           <p>Step 1: Enter an amount</p>
           <label>$</label>
-          <input type="number" min="0" placeholder="0.00" step="0.01">
+          <input type="number" min="0" value="0" placeholder="0.00" step="0.01">
         </div>
         <div class="col-sm-4">
           <p>Step 2: How do you want your change?</p>
+          <!-- Change selector radio buttons -->
           <input type="radio"  id="lg-change" name="change-radio-option" checked="checked">
           <label>Largest possible</label>
           <br>
           <input type="radio" id="custom-change" name="change-radio-option">
           <label>Custom</label>
+          <!-- /Change selector radio buttons -->
+          <!-- Change type checkboxes -->
           <div class="row" id="change-cbox-group">
-            <div class="col-sm-6">
-              <input type="checkbox" id="hundred" name="bills">
-              <label>$100 bills</label>
+            <div class="col-sm-12">
+              <input type="checkbox" name="change-type" value="hundred" disabled="disabled">
+              <label f>$100 bills</label>
               <br>
-              <input type="checkbox" id="fifty" name="bills">
+              <input type="checkbox" name="change-type" value="fifty" disabled="disabled">
               <label>$50 bills</label>
               <br>
-              <input type="checkbox" id="twenty" name="bills">
+              <input type="checkbox" name="change-type" value="twenty" disabled="disabled">
               <label>$20 bills</label>
               <br>
-              <input type="checkbox" id="ten" name="bills">
+              <input type="checkbox" name="change-type" value="ten" disabled="disabled">
               <label>$10 bills</label>
               <br>
-              <input type="checkbox" id="five" name="bills">
+              <input type="checkbox" name="change-type" value="five" disabled="disabled">
               <label>$50 bills</label>
               <br>
-              <input type="checkbox" id="one" name="bills">
+              <input type="checkbox" name="change-type" value="one" disabled="disabled">
               <label>$1 bills</label>
             </div>
-            <div class="col-sm-6">
-              <input type="checkbox" id="quarter" name="coins">
-              <label>Quarters</label>
-              <br>
-              <input type="checkbox" id="dime" name="coins">
-              <label>Dimes</label>
-              <br>
-              <input type="checkbox" id="nickel" name="coins">
-              <label>Nickels</label>
-              <br>
-              <input type="checkbox" id="penny" name="coins">
-              <label>Pennies</label>
-            </div>
           </div>
+          <!-- /Change type checkboxes -->
         </div>
         <div class="col-sm-4">
           <p>Step 3: Calculate your change</p>
@@ -92,4 +83,9 @@
       </div>
     </div>
   </body>
+  <!-- jQuery/JS scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="changecounter.js"></script>
   </html>
