@@ -11,16 +11,37 @@ var ones = 0;
 
 function main() {
   $('#submit').on('click', function() {
+    $('#submit').prop('disabled', true); //prevents creation of multiple tables
     credit = financial(document.getElementById('input-amt').value);
-    dispenseChange();
-    printChange();
-    printTable();
+    if(initialCheck() === true) { //if it passes, then execute block
+      dispenseChange();
+      printTable();
+    }
   });
-}
 
 /* Rounds any decimal values to nearest whole number */
-function financial(x) {
-  return Number.parseFloat(x).toFixed(0);
+function financial(val) {
+  return Number.parseFloat(val).toFixed(0);
+}
+
+/* Checks input text and checkboxes. Half of it is for
+browsers that do not recognize <input type="number">. (See
+https://bugzilla.mozilla.org/show_bug.cgi?id=1398528 for
+details)*/
+function initialCheck() {
+  if(isNaN(credit) || credit < 1) { //checks for invalid values
+    alert("Please enter a number value higher than 0.");
+    $('#submit').prop('disabled', false); //re-enable "calculate" button
+    return false; //fails initial check
+  }
+  else if($('input[type=checkbox]').is(':checked') === false) { //checks if at least one checkbox is ticked.
+    alert("Please check at least one checkbox in step 2.");
+    $('#submit').prop('disabled', false); //re-enable "calculate" button
+    return false; //fails initial check
+  }
+  else {
+    return true;
+  }
 }
 
 /* Resets number of bills dispensed */
@@ -32,11 +53,11 @@ function reset() {
   tens = 0;
   fives = 0;
   ones = 0;
+  $('#submit').prop('disabled', true); //re-enables "Calculate" button
 }
 
 function dispenseChange() {
   while(credit != 0) {
-    console.log("looping");
     if($('input[type=checkbox][name="hundred"]').is(':checked') && credit % 100 === 0) {
       credit -= 100;
       hundreds++;
@@ -62,15 +83,6 @@ function dispenseChange() {
       ones++;
     }
   }
-}
-
-function printChange() {
-  console.log("$100s: " + hundreds);
-  console.log("$50s: " + fifties);
-  console.log("$20s: " + twenties);
-  console.log("$10s: " + tens);
-  console.log("$5s: " + fives);
-  console.log("$1s: " + ones);
 }
 
 function printTable() {
