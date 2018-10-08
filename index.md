@@ -10,5 +10,5 @@ My name is Manuel Larios and I am a Senior-year Computer Science student at [Wes
 All the code referenced is for the CS46X Software Engineering course sequence and is hosted in the following repository: [https://github.com/mlarios1/CS460](https://github.com/mlarios1/CS460)
 
 ### Software Engineering I (CS 460) Assignments:
-[Homework 1](https://mlarios1.github.io/mlarios1.github.io/CS460/HW1/): HTML, CSS, Bootstrap and Git
-[Homework 2](https://mlarios1.github.io/mlarios1.github.io/CS460/HW2/): HTML, CSS, JavaScript and jQuery
+* [Homework 1](https://mlarios1.github.io/mlarios1.github.io/CS460/HW1/): HTML, CSS, Bootstrap and Git
+* [Homework 2](https://mlarios1.github.io/mlarios1.github.io/CS460/HW2/): HTML, CSS, JavaScript and jQuery
