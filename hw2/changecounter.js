@@ -10,14 +10,16 @@ var fives = 0;
 var ones = 0;
 
 function main() {
-  $('#submit').on('click', function() {
+  $('#submit').on('click', function() { //when user clicks "Calculate" button
     $('#submit').prop('disabled', true); //prevents creation of multiple tables
     credit = financial(document.getElementById('input-amt').value);
     if(initialCheck() === true) { //if it passes, then execute block
+      $('#input-amt').val(credit); //Sets textbox value in step 1. Mostly if user enters floating-point value (i.e. 0.001)
       dispenseChange();
       printTable();
     }
   });
+}
 
 /* Rounds any decimal values to nearest whole number */
 function financial(val) {
@@ -44,7 +46,7 @@ function initialCheck() {
   }
 }
 
-/* Resets number of bills dispensed */
+/* Resets number of bills dispensed, among other things */
 function reset() {
   credit = 0;
   hundreds = 0;
@@ -53,7 +55,9 @@ function reset() {
   tens = 0;
   fives = 0;
   ones = 0;
-  $('#submit').prop('disabled', true); //re-enables "Calculate" button
+  $('#submit').prop('disabled', false); //re-enables "Calculate" button
+  $('#input-amt').val(""); //set textbox value to empty
+  $('.col-sm-12').find('input:checkbox').prop('checked', true); //re-tick all checkboxes
 }
 
 function dispenseChange() {
@@ -107,7 +111,7 @@ function printTable() {
       </tr>\
     </table>\
     <br>\
-    <button id='clear-data'>Start over</button>\
+    <button id='clear-data' onclick=\"reset(); $('.print-table').remove();\">Start over</button>\
     <label>-- Clears table and resets the program</label>\
   </div>");
 }
