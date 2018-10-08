@@ -86,6 +86,10 @@ function dispenseChange() {
       credit--;
       ones++;
     }
+    else {
+      alert("It's not possible to properly dispense your requested change with the amount you entered and/or the checkboxes you ticked. Click the \"Start over\" button to try again.");
+      credit = 0; //forces credit to "0" to stop infinite looping
+    }
   }
 }
 
