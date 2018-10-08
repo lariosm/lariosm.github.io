@@ -34,36 +34,29 @@
         <div class="col-sm-4">
           <p>Step 1: Enter an amount</p>
           <label>$</label>
-          <input type="number" min="0" value="0" placeholder="0.00" step="0.01">
+          <input type="number" id="input-amt" min="0" value="0" placeholder="0.00" step="0.01">
         </div>
         <div class="col-sm-4">
           <p>Step 2: How do you want your change?</p>
-          <!-- Change selector radio buttons -->
-          <input type="radio"  id="lg-change" name="change-radio-option" checked="checked">
-          <label>Largest possible</label>
-          <br>
-          <input type="radio" id="custom-change" name="change-radio-option">
-          <label>Custom</label>
-          <!-- /Change selector radio buttons -->
           <!-- Change type checkboxes -->
           <div class="row" id="change-cbox-group">
             <div class="col-sm-12">
-              <input type="checkbox" name="change-type" value="hundred" disabled="disabled">
+              <input type="checkbox" name="hundred">
               <label f>$100 bills</label>
               <br>
-              <input type="checkbox" name="change-type" value="fifty" disabled="disabled">
+              <input type="checkbox" name="fifty">
               <label>$50 bills</label>
               <br>
-              <input type="checkbox" name="change-type" value="twenty" disabled="disabled">
+              <input type="checkbox" name="twenty">
               <label>$20 bills</label>
               <br>
-              <input type="checkbox" name="change-type" value="ten" disabled="disabled">
+              <input type="checkbox" name="ten">
               <label>$10 bills</label>
               <br>
-              <input type="checkbox" name="change-type" value="five" disabled="disabled">
-              <label>$50 bills</label>
+              <input type="checkbox" name="five">
+              <label>$5 bills</label>
               <br>
-              <input type="checkbox" name="change-type" value="one" disabled="disabled">
+              <input type="checkbox" name="one">
               <label>$1 bills</label>
             </div>
           </div>
@@ -71,21 +64,17 @@
         </div>
         <div class="col-sm-4">
           <p>Step 3: Calculate your change</p>
-          <button id="calculate">Calculate</button>
-          <br>
-          <label>OR</label>
-          <br>
-          <button id="clear">Start over</button>
+          <button id="submit">Calculate</button>
         </div>
       </div>
-      <div class="row" id="table-change">
-        <!-- CHANGE TABLE TO BE DISPLAYED HERE -->
+      <div class="row">
+        <div class="container" id="table-change">
+          <!-- CHANGE TABLE TO BE DISPLAYED HERE -->
+        </div>
       </div>
     </div>
   </body>
   <!-- jQuery/JS scripts -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="changecounter.js"></script>
   </html>
