@@ -19,7 +19,7 @@ At this point, I haven't fully mastered JavaScript (and jQuery), but I felt I ha
 
 Keeping in mind I needed to incorporate a few form elements and have it generate a list or table element, I've decided, after a few days, to create some sort of change dispenser, simliar to what you would find at an ATM, or more likely, at a self-checkout kiosk. I had the following design in mind:
 
-![gallery page](https://mlarios1.github.io/mlarios1.github.io/CS460/HW2/hw2_design.png)
+![gallery page](https://mlarios1.github.io/mlarios1.github.io/CS460/HW2/hw2_design.jpg)
 
 Unfortuately, I had to water down the design several times bceause not only was it going to get complicated, but it was something I probably wouldn't be able to finish over the course of the three days I had left to work with.
 
