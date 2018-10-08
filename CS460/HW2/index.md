@@ -156,6 +156,18 @@ function printTable() {
   </div>");
 ```
 
+Finally, after all that was set up, I created an event listener so that when the "Calculate" button is pressed, it would perform various tasks, including making sure valid values were being passed, as well as dispensing bills and printing a table.
+```
+$('#submit').on('click', function() { //when user clicks "Calculate" button
+    $('#submit').prop('disabled', true); //prevents creation of multiple tables
+    credit = financial(document.getElementById('input-amt').value);
+    if(initialCheck() === true) { //if it passes, then execute block
+      $('#input-amt').val(credit); //Sets textbox value in step 1. Mostly if user enters floating-point value (i.e. 0.001)
+      dispenseChange();
+      printTable();
+    }
+  });
+```
 Because we were required to branch off from our master branch, I've created a second branch called 'javascript' where I would commit all my JavaScript work, while committing all my HTML work back at the master branch. Eventually, I merged them back under the master branch and confirmed it was still working.
 
 ![Web page demo](https://mlarios1.github.io/mlarios1.github.io/CS460/HW2/hw2.png)
