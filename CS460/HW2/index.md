@@ -26,7 +26,7 @@ Unfortuately, I had to water down the design several times bceause not only was 
 ## Step 3: Coding the assignment
 
 Using the HTML file I copied from Homework 1, I've added a few elements, like the text field, which only takes in number values, doesn't allow for negative values, has a placeholder and increments by 1.
-```
+```html
 <div class="col-sm-4">
   <p>Step 1: Enter an amount</p>
   <label>$</label>
@@ -35,7 +35,7 @@ Using the HTML file I copied from Homework 1, I've added a few elements, like th
 ```
 
 Checkboxes, all which would be ticked by default upon page load.
-```
+```html
 <div class="col-sm-4">
   <p>Step 2: How do you want your change?</p>
   <!-- Change type checkboxes -->
@@ -65,7 +65,7 @@ Checkboxes, all which would be ticked by default upon page load.
 ```
 
 Last, but not least, the "Calculate" button, which would trigger a series of functions in my JavaScript file.
-```
+```html
 <div class="col-sm-4">
   <p>Step 3: Calculate your change</p>
   <button id="submit">Calculate</button>
@@ -75,7 +75,7 @@ Last, but not least, the "Calculate" button, which would trigger a series of fun
 ## Step 4: Coding the assignment (JavaScript/jQuery)
 
 After modifying the HTML document in preparation for "hooking" with my JavaScript file, I started by creating variables at the top like so, followed by sets of basic functions (No HTML/JS "hookups" yet).
-```
+```javascript
 /* Amount of money to "insert" */
 var credit = 0;
 
@@ -97,7 +97,7 @@ function reset() {
 ```
 
 One of the core basic functions I've written ensures that change is being dispensed properly. Eventually, it would also use jQuery functions to check if a checkbox for, say $50 bills, is checked so it knows whether or not to dispense $50 bills to the user.
-```
+```javascript
 function dispenseChange() {
   while(credit != 0) {
     if($('input[type=checkbox][name="hundred"]').is(':checked') && credit % 100 === 0) {
@@ -133,7 +133,7 @@ function dispenseChange() {
 ```
 
 After that was up and running, I created a function that would append HTML code to the HTML document which would generate a table, showing the amount of each bill that was dispensed, followed by a button that would delete the table and reset the program.
-```
+```javascript
 function printTable() {
   $('#table-change').append("<div class='print-table'>\
     <h4>Your change is as follows:</h4>\
@@ -162,7 +162,7 @@ function printTable() {
 ```
 
 Finally, after all that was set up, I created an event listener so that when the "Calculate" button is pressed, it would perform various tasks, including making sure valid values were being passed, dispensing bills, printing a table and so forth.
-```
+```javascript
 $('#submit').on('click', function() { //when user clicks "Calculate" button
     $('#submit').prop('disabled', true); //prevents creation of multiple tables
     credit = financial(document.getElementById('input-amt').value);
