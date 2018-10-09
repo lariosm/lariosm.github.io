@@ -74,24 +74,29 @@ Last, but not least, the "Calculate" button, which would trigger a series of fun
 
 ## Step 4: Coding the assignment (JavaScript/jQuery)
 
-After modifying the HTML document in preparation for "hooking" with my JavaScript file, I started by creating variables at the top like so (although not with those exact names shown below) followed by sets of basic functions (No HTML/JS "hookups" yet).
+After modifying the HTML document in preparation for "hooking" with my JavaScript file, I started by creating variables at the top like so, followed by sets of basic functions (No HTML/JS "hookups" yet).
 ```
-NOTE: This is the pseudocode version of what I've written in my .js file.
+/* Amount of money to "insert" */
+var credit = 0;
 
-var variable1;
-var variable2;
-...
-...
-function foo {
-  //code inside here
+/* Number of each bill dispensed */
+var hundreds = 0;
+var fifties = 0;
+var twenties = 0;
+var tens = 0;
+var fives = 0;
+var ones = 0;
+
+function dispenseChange() {
+  //code...
 }
 
-function foo1 {
-  //code inside here
+function reset() {
+  //code...
 }
 ```
 
-One of the core basic functions I've written ensures that change is being dispensed properly. Eventually, it would also use jQuery functions to check if a checkbox for, say $50 bills, is checked so it knows whether or not to distribute $50 bills to the user.
+One of the core basic functions I've written ensures that change is being dispensed properly. Eventually, it would also use jQuery functions to check if a checkbox for, say $50 bills, is checked so it knows whether or not to dispense $50 bills to the user.
 ```
 function dispenseChange() {
   while(credit != 0) {
@@ -156,7 +161,7 @@ function printTable() {
   </div>");
 ```
 
-Finally, after all that was set up, I created an event listener so that when the "Calculate" button is pressed, it would perform various tasks, including making sure valid values were being passed, as well as dispensing bills and printing a table.
+Finally, after all that was set up, I created an event listener so that when the "Calculate" button is pressed, it would perform various tasks, including making sure valid values were being passed, dispensing bills, printing a table and so forth.
 ```
 $('#submit').on('click', function() { //when user clicks "Calculate" button
     $('#submit').prop('disabled', true); //prevents creation of multiple tables
