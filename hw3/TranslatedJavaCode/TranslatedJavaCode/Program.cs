@@ -18,4 +18,13 @@ namespace TranslatedJavaCode
             Next = next;
         }
     }
+
+    public interface IQueueInterface<T>
+    {
+        T Push(T element);
+
+        T Pop();
+
+        bool IsEmpty();
+    }
 }
