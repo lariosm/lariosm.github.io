@@ -27,4 +27,18 @@ namespace TranslatedJavaCode
 
         bool IsEmpty();
     }
+
+    public class QueueUnderflowException : Exception
+    {
+        public QueueUnderflowException() : base()
+        {
+            //No code here
+        }
+
+        public QueueUnderflowException(string message) : base(message)
+        {
+            //No code here
+        }
+
+    }
 }
