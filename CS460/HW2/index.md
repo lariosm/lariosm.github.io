@@ -96,7 +96,7 @@ function reset() {
 }
 ```
 
-One of the core basic functions I've written (```dispenseChange()```) ensures that change is being dispensed properly. Eventually, it would also use jQuery functions to check if a checkbox for, say $50 bills, is checked so it knows whether or not to dispense $50 bills to the user.
+One of the core basic functions I've written, ```dispenseChange()```, ensures that change is being dispensed properly. Eventually, it would also use jQuery functions to check if a checkbox for, say $50 bills, is checked so it knows whether or not to dispense $50 bills to the user.
 ```javascript
 function dispenseChange() {
   while(credit != 0) {
