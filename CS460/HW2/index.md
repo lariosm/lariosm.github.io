@@ -96,7 +96,7 @@ function reset() {
 }
 ```
 
-One of the core basic functions I've written ensures that change is being dispensed properly. Eventually, it would also use jQuery functions to check if a checkbox for, say $50 bills, is checked so it knows whether or not to dispense $50 bills to the user.
+One of the core basic functions I've written (```dispenseChange()```) ensures that change is being dispensed properly. Eventually, it would also use jQuery functions to check if a checkbox for, say $50 bills, is checked so it knows whether or not to dispense $50 bills to the user.
 ```javascript
 function dispenseChange() {
   while(credit != 0) {
@@ -173,6 +173,6 @@ $('#submit').on('click', function() { //when user clicks "Calculate" button
     }
   });
 ```
-Because we were required to branch off from our master branch, I've created a second branch called 'javascript' where I would commit all my JavaScript work, while committing all my HTML work back at the master branch. Eventually, I merged them back under the master branch and confirmed it was still working.
+Because we were required to branch off from our master branch, I've created a second branch called ```javascript``` where I would commit all my JavaScript work, while committing all my HTML work back at the ```master``` branch. Eventually, I merged them back under the master branch and confirmed it was still working.
 
 ![Web page demo](https://mlarios1.github.io/mlarios1.github.io/CS460/HW2/hw2.png)
