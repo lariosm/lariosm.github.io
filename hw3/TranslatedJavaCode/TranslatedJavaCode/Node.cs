@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TranslatedJavaCode
 {
+    /// <summary>
+    /// Singly-linked node class
+    /// </summary>
     public class Node<T>
     {
         public T Data;

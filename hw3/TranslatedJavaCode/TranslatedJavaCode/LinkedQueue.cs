@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace TranslatedJavaCode
 {
+    /// <summary>
+    /// A singly-linked FIFO queue.
+    /// From Dale, Joyce and Weems "Object-Oriented Data Structures Using Java"
+    /// Modified for CS460 HW3
+    /// 
+    /// See IQueueInterface.cs for documentation.
+    /// </summary>
     public class LinkedQueue<T> : IQueueInterface<T>
     {
         private Node<T> Front;
@@ -31,6 +38,7 @@ namespace TranslatedJavaCode
             }
             else
             {
+                //General case
                 Node<T> tmp = new Node<T>(element, null);
                 Rear.Next = tmp;
                 Rear = tmp;
@@ -47,12 +55,14 @@ namespace TranslatedJavaCode
             }
             else if (Front == Rear)
             {
+                //one item in queue
                 tmp = Front.Data;
                 Front = null;
                 Rear = null;
             }
             else
             {
+                //General case
                 tmp = Front.Data;
                 Front = Front.Next;
             }

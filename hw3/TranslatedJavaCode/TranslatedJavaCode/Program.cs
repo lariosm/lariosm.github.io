@@ -6,8 +6,31 @@ using System.Threading.Tasks;
 
 namespace TranslatedJavaCode
 {
+    /// <summary>
+    /// Original by Sumit Ghosh "An interesting Method to Generate Binary Numbers from 1 to n"
+    /// at https://www.geeksforgeeks.org/interesting-method-generate-binary-numbers-1-n/
+    /// 
+    /// Adapted for CS 460 HW3.  This simple example demonstrates the rather powerful
+    /// application of Breadth-First Search to enumeration of states problems.
+    /// 
+    /// There are easier ways to generate a list of binary values, but this technique
+    /// is very general and a good one to remember for other uses.
+    /// </summary>
 	public class Program
     {
+        /// <summary>
+        /// Print the binary representation of all numbers from 1 up to n.
+        /// This is accomplished by using a FIFO queue to perform a level
+        /// order (i.e. BFS) traversal of a virtual binary tree that
+        /// looks like this:
+        ///              1
+        ///          /       \
+        ///         10       11
+        ///        /  \     /  \
+        ///      100  101  110  111
+        ///      etc.
+        /// and then storing each "value" in a list as it is "visited".
+        /// </summary>
         public static LinkedList<String> GenerateBinaryRepresentationList(int n)
         {
             //Create an empty queue of strings with which to perform the traversal
@@ -54,7 +77,7 @@ namespace TranslatedJavaCode
             if(args.Length < 1)
             {
                 Console.WriteLine("Please invoke with the max value to print to print binary up to, like this:");
-                Console.WriteLine("\tjava Main 12");
+                Console.WriteLine("\t Program 12");
                 return;
             }
             try
