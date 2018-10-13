@@ -30,7 +30,7 @@ and so forth.
 
 Having completed the previous step, I downloaded [javacode2.zip](http://www.wou.edu/~morses/classes/cs46x/assignments/javacode2.zip), extracted its contents and analyzed each Java file to see what part they played in making the program work. Next, I compiled main.java using the command line in Windows and played around with the program.
 
-![Running Java program]()
+![Running Java program](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/java_main.gif)
 
 ## Step 3: Translating Java to C#
 
@@ -40,19 +40,19 @@ After getting a sense of what the program does (it prints a binary representatio
 
 For ```Node.cs```, it was a matter of copying and pasting the code (Which I didn't!) and capitalizing field names.
 
-[Side-by-side Node class]()
+![Side-by-side Node class](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/nodeclass.PNG)
 
 ## 3.2 IQueueInterface.cs
 
 The same goes with ```IQueueInterface.cs```. The only notable changes I had to make was put an "I" in front of QueueInterface (naming convention), write ```T Pop()``` without throwing ```QueueUnderflowException``` (because it wouldn't let me) and write ```bool``` instead of ```boolean```.
 
-[Side-by-side IQueueInterface class]()
+[Side-by-side IQueueInterface class](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/interfaceclass.PNG)
 
 ## 3.3 QueueUnderflowException.cs
 
 As I translated ```QueueUnderflow.java``` to C#, I realized right away I couldn't use the ```extends``` keyword, nor ```super()```, like I was used to in Java. Instead, I had to use the colon after the class name, followed by the class I want to inherit. The same was with methods, only I used ```base()``` in place of the inherited class name (or base class, as it's called in C#).
 
-[Side-by-side QueueUnderflowException class]()
+[Side-by-side QueueUnderflowException class](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/queueunderflowclass.PNG)
 
 ## 3.4 LinkedQueue.cs
 
@@ -62,7 +62,7 @@ Similar to the other three classes I translated, keywords and casing of certain 
 T tmp = null;
 ```
 
-[Side-by-side LinkedQueue class]()
+[Side-by-side LinkedQueue class](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/linkedqueueclass.PNG)
 
 IntelliSense would tell me it would not compile because of the possibility that ```T``` (a generic type) could be a non-nullable value type. It suggested I use ```default(T)``` instead, which I did.
 
@@ -77,4 +77,4 @@ foreach(string s in output)
 }
 ```
 
-[Side-by-side Program class]()
+[Side-by-side Program class](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/programclass.PNG)
