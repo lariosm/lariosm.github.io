@@ -91,4 +91,4 @@ Given the results, I'd say this assignment was a success!
 
 ## Final thoughts
 
-Given this was my first hands-on experience working with C#, I have to say, the learning process wasn't as bad as I initally thought. Sure, it was rough because we had less than a week to learn the language, but I think with enough time and practice, I might come to embrace C#, maybe even use it as my primary language given its widespread capabilities over Java.
+Given this was my first hands-on experience working with C#, I have to say, the learning process wasn't as bad as I initally thought. Sure, it was rough because we had less than a week to learn the language, but I think with enough time and practice, I might come to embrace C#, maybe even use it as my preferred language given its widespread capabilities over Java.
