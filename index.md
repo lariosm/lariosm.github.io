@@ -12,3 +12,4 @@ All the code referenced is for the CS46X Software Engineering course sequence an
 ### Software Engineering I (CS 460) Assignments:
 * [Homework 1](https://mlarios1.github.io/mlarios1.github.io/CS460/HW1/): HTML, CSS, Bootstrap and Git
 * [Homework 2](https://mlarios1.github.io/mlarios1.github.io/CS460/HW2/): HTML, CSS, JavaScript and jQuery
+* [Homework 3](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/): Translating Java to C#
