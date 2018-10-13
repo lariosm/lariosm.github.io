@@ -8,6 +8,8 @@ For this next assignment, we were tasked with translating Java code to C# (prono
 * Code repository referencing this work can be found [here](https://github.com/mlarios1/CS460/tree/master/hw3).
 * Clone repo link: [https://github.com/mlarios1/CS460.git](https://github.com/mlarios1/CS460.git)
 
+NOTE: Any images you find too small or hard to read should be clickable.
+
 ## Step 1: Preparation
 
 Given my background in Java, C# wasn't as different and intimidating as I initially thought. However, there were certain syntax and naming conventions I had to familiarize myself with. For example, names on ```public``` and ```protected``` fields and methods must be ```PascalCased```,
