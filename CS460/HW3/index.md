@@ -78,3 +78,15 @@ foreach(string s in output)
 ```
 
 ![Side-by-side Program class](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/programclass.PNG)
+
+## Step 4: Output
+
+Having completed the previous step with no reported syntax or compile errors within Visual Studio. I fire up the command line, compile the classes, which in turn gives me ```Program.exe``` and run the same commands I did back in step 2.
+
+![Running Program.exe](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/cs_program.gif)
+
+Given the results, I'd say this assignment was a success!
+
+## Final thoughts
+
+Given this was my first hands-on experience working with C#, I have to say, the learning process wasn't as bad as I initally thought. Sure, it was rough because we had less than a week to learn the language, but I think with enough time and practice, I might come to embrace C#, maybe even use it as my primary language given its widespread capabilities over Java.
