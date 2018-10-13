@@ -33,22 +33,22 @@ namespace TranslatedJavaCode
 
             if (IsEmpty())
             {
-                Node<T> Tmp = new Node<T>(element, null);
-                Rear = Front = Tmp;
+                Node<T> tmp = new Node<T>(element, null);
+                Rear = Front = tmp;
             }
             else
             {
                 //General case
-                Node<T> Tmp = new Node<T>(element, null);
-                Rear.Next = Tmp;
-                Rear = Tmp;
+                Node<T> tmp = new Node<T>(element, null);
+                Rear.Next = tmp;
+                Rear = tmp;
             }
             return element;
         }
 
         public T Pop()
         {
-            T Tmp = default(T);
+            T tmp = default(T);
             if (IsEmpty())
             {
                 throw new QueueUnderflowException("The queue was empty when pop was invoked.");
@@ -56,17 +56,17 @@ namespace TranslatedJavaCode
             else if (Front == Rear)
             {
                 //one item in queue
-                Tmp = Front.Data;
+                tmp = Front.Data;
                 Front = null;
                 Rear = null;
             }
             else
             {
                 //General case
-                Tmp = Front.Data;
+                tmp = Front.Data;
                 Front = Front.Next;
             }
-            return Tmp;
+            return tmp;
         }
 
         public bool IsEmpty()

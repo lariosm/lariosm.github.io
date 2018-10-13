@@ -34,40 +34,40 @@ namespace TranslatedJavaCode
         public static LinkedList<String> GenerateBinaryRepresentationList(int n)
         {
             //Create an empty queue of strings with which to perform the traversal
-            LinkedQueue<StringBuilder> Queue = new LinkedQueue<StringBuilder>();
+            LinkedQueue<StringBuilder> queue = new LinkedQueue<StringBuilder>();
 
             //A list for returning the binary values
-            LinkedList<String> Output = new LinkedList<string>();
+            LinkedList<String> output = new LinkedList<string>();
 
             if(n < 1)
             {
                 //binary representation of negative values is not supported
                 //return an empty list
-                return Output;
+                return output;
             }
 
             //Enqueue the first binary number. Use a dynamic string to avoid string concat.
-            Queue.Push(new StringBuilder("1"));
+            queue.Push(new StringBuilder("1"));
 
             //BFS
             while(n-- > 0)
             {
                 //print the front of queue
-                StringBuilder sb = Queue.Pop();
-                Output.AddLast(sb.ToString());
+                StringBuilder sb = queue.Pop();
+                output.AddLast(sb.ToString());
 
                 //make a copy
                 StringBuilder sbc = new StringBuilder(sb.ToString());
 
                 //left child
                 sb.Append('0');
-                Queue.Push(sb);
+                queue.Push(sb);
 
                 //right child
                 sbc.Append('1');
-                Queue.Push(sbc);
+                queue.Push(sbc);
             }
-            return Output;
+            return output;
         }
 
         //Driver program to test above function
@@ -89,14 +89,14 @@ namespace TranslatedJavaCode
                 Console.WriteLine("I'm sorry, I can't understand the number: " + args[0]);
                 return;
             }
-            LinkedList<String> Output = GenerateBinaryRepresentationList(n);
+            LinkedList<String> output = GenerateBinaryRepresentationList(n);
             //Print it right justified. Longest string is the last one.
             //Print enought spaces to move it over the correct distance.
-            int MaxLength = Output.Last().Length;
+            int maxLength = output.Last().Length;
 
-            foreach(string s in Output)
+            foreach(string s in output)
             {
-                for(var i = 0; i < MaxLength - s.Length; ++i)
+                for(var i = 0; i < maxLength - s.Length; ++i)
                 {
                     Console.Write(" ");
                 }

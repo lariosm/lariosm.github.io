@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TranslatedJavaCode
 {
     /// <summary>
-    /// A FIFI queue interface. This ADT is suitable for a
+    /// A FIFO queue interface. This ADT is suitable for a
     /// singly-linked queue.
     /// </summary>
     public interface IQueueInterface<T>
