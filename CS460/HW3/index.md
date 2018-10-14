@@ -16,7 +16,7 @@ Before diving into this assignment, I took some time to educate myself with C# s
 
 ## Step 2: Analyzing Java Code
 
-Having gone over the material from the previous step, I got down to work. To begin, I downloaded [javacode2.zip](http://www.wou.edu/~morses/classes/cs46x/assignments/javacode2.zip), extracted its contents and analyzed each Java file to see what part they played in making the program work. Next, I compiled main.java using the command line in Windows and played around with the program.
+Having gone over the material from the previous step, I got down to work. To begin, I downloaded [javacode2.zip](http://www.wou.edu/~morses/classes/cs46x/assignments/javacode2.zip), extracted its contents and analyzed each Java file to see what part they played in making the program work. Next, I compiled ```main.java``` using the command line in Windows and played around with the program.
 
 [![Running Java program](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/java_main.gif)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/java_main.gif)
 
@@ -50,13 +50,13 @@ Similar to the other three classes I translated, keywords and casing of certain 
 T tmp = null;
 ```
 
-[![Side-by-side LinkedQueue class](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/linkedqueueclass.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/linkedqueueclass.PNG)
+IntelliSense would tell me it would not compile because of the possibility that ```T```, a generic type, could be a non-nullable value type. It suggested I use ```default(T)``` instead, which I did.
 
-IntelliSense would tell me it would not compile because of the possibility that ```T``` (a generic type) could be a non-nullable value type. It suggested I use ```default(T)``` instead, which I did.
+[![Side-by-side LinkedQueue class](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/linkedqueueclass.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/linkedqueueclass.PNG)
 
 ## 3.5 Program.cs
 
-After assembling the previous four classes, I would piece them altogether in one class. As I wrote ```Program.cs```, I made sure to keep in line with the structure and names of variables in ```Main.java```. (Though I did change some names for clarity.) One of the few notable changes I made in this class was that because ```NumberFormatException``` in my ```try``` block did not exist in C#, I had to replace it with ```FormatException``` which seems to match the description very well. The other change was the structure for the "for each" loop in the ```Main``` method.
+After assembling the previous four classes, I would piece them together in one class. As I wrote ```Program.cs```, I made sure to keep in line with the structure and names of variables in ```Main.java```, though I did change some names for clarity. One of the few notable changes I made in this class was that because ```NumberFormatException``` in my ```try``` block did not exist in C#, I had to replace it with ```FormatException``` which seems to match the description very well. The other change was the structure for the "for each" loop in the ```Main``` method.
 
 ```C#
 foreach(string s in output)
