@@ -30,19 +30,19 @@ For ```Node.cs```, it was a matter of copying and pasting the code (Which I didn
 
 [![Side-by-side Node class](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/nodeclass.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/nodeclass.PNG)
 
-## 3.2 IQueueInterface.cs
+## 3.2: IQueueInterface.cs
 
 The same goes with ```IQueueInterface.cs```. The only notable changes I had to make was put an "I" in front of QueueInterface (naming convention), write ```T Pop()``` without throwing ```QueueUnderflowException``` (because it wouldn't let me) and write ```bool``` instead of ```boolean```.
 
 [![Side-by-side IQueueInterface class](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/interfaceclass.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/interfaceclass.PNG)
 
-## 3.3 QueueUnderflowException.cs
+## 3.3: QueueUnderflowException.cs
 
 As I translated ```QueueUnderflow.java``` to C#, I realized right away I couldn't use the ```extends``` keyword, nor ```super()```, like I was used to in Java. Instead, I had to use the colon after the class name, followed by the class I want to inherit. The same was with methods, only I used ```base()``` in place of the inherited class name (or base class, as it's called in C#).
 
 [![Side-by-side QueueUnderflowException class](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/queueunderflowclass.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/queueunderflowclass.PNG)
 
-## 3.4 LinkedQueue.cs
+## 3.4: LinkedQueue.cs
 
 Similar to the other three classes I translated, keywords and casing of certain variables were changed. However, instead of throwing a ```NullPointerException``` as I was used to in Java (because it doesn't exist in C#), I found ```NullReferenceException``` on Google and realized it was similar, if not exactly alike, to ```NullPointerException```. On a separate note, when I tried assigning ```null``` to ```tmp``` like so
 
@@ -54,7 +54,7 @@ IntelliSense would tell me it would not compile because of the possibility that 
 
 [![Side-by-side LinkedQueue class](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/linkedqueueclass.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/linkedqueueclass.PNG)
 
-## 3.5 Program.cs
+## 3.5: Program.cs
 
 After assembling the previous four classes, I would piece them together in one class. As I wrote ```Program.cs```, I made sure to keep in line with the structure and names of variables in ```Main.java```, though I did change some names for clarity. One of the few notable changes I made in this class was that because ```NumberFormatException``` in my ```try``` block did not exist in C#, I had to replace it with ```FormatException``` which seems to match the description very well. The other change was the structure for the "for each" loop in the ```Main``` method.
 
