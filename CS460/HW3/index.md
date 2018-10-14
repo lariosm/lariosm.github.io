@@ -22,7 +22,7 @@ Having gone over the material from the previous step, I got down to work. To beg
 
 ## Step 3: Translating Java to C#
 
-After getting a sense of what the program does (it prints a binary representation of all numbers from 1 to n), I opened up Visual Studio, created a new project (or solution, as Visual Studio calls it). For the most part, it was somewhat easy, though I constantly had to remind myself to follow C#'s conventions, not Java's (given my background on it), and search the internet for alternatives as I went.
+After getting a sense of what the program does (it prints a binary representation of all numbers from 1 to n), I opened up Visual Studio and created a new project (or solution, as Visual Studio calls it). For the most part, it was somewhat easy, though I constantly had to remind myself to follow C#'s conventions, not Java's (given my background on it), and search the internet for alternatives as I went.
 
 ## 3.1: Node.cs
 
@@ -75,6 +75,6 @@ Having completed the previous step with no reported syntax or compile errors wit
 
 Given the results, I'd say this assignment was a success!
 
-## Final thoughts
+## Final Thoughts
 
 Given this was my first hands-on experience working with C#, I have to say, the learning process wasn't as bad as I initally thought. Sure, it was rough because we had less than a week to learn the language, but I think with enough time and practice, I might come to embrace C#, maybe even use it as my preferred language, given its widespread capabilities over Java.
