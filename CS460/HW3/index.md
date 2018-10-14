@@ -8,35 +8,21 @@ For this next assignment, we were tasked with translating Java code to C# (prono
 * Code repository referencing this work can be found [here](https://github.com/mlarios1/CS460/tree/master/hw3).
 * Clone repo link: [https://github.com/mlarios1/CS460.git](https://github.com/mlarios1/CS460.git)
 
-NOTE: Any images you find too small or hard to read should be clickable.
+NOTE: Any images too small or hard to read should open a full-sized version once clicked.
 
 ## Step 1: Preparation
 
-Given my background in Java, C# wasn't as different and intimidating as I initially thought. However, there were certain syntax and naming conventions I had to familiarize myself with. For example, names on ```public``` and ```protected``` fields and methods must be ```PascalCased```,
-
-```C#
-public string MyString
-```
-
-whereas ```private``` fields, parameters and local variables should be ```camelCased```.
-
-Another example would be instead of inheriting a class using ```extends```, like I would with Java, I would place a colon in between the class name and the inherited class like so:
-
-```C#
-public class MyClass : InheritedClass
-```
-
-and so forth.
+Before diving into this assignment, I took some time to educate myself with C# syntax and naming conventions by going through some [slides](http://www.wou.edu/~morses/classes/cs46x/presentations/CS460_3.html#/), checking out Microsoft's [coding](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions) and [naming](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines) guidelines and looking over last year's students' work on this assignment, although their requirements were a little bit different from this one.
 
 ## Step 2: Analyzing Java Code
 
-Having completed the previous step, I downloaded [javacode2.zip](http://www.wou.edu/~morses/classes/cs46x/assignments/javacode2.zip), extracted its contents and analyzed each Java file to see what part they played in making the program work. Next, I compiled main.java using the command line in Windows and played around with the program.
+Having gone over the material from the previous step, I got down to work. To begin, I downloaded [javacode2.zip](http://www.wou.edu/~morses/classes/cs46x/assignments/javacode2.zip), extracted its contents and analyzed each Java file to see what part they played in making the program work. Next, I compiled main.java using the command line in Windows and played around with the program.
 
-![Running Java program](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/java_main.gif)
+[![Running Java program](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/java_main.gif)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/java_main.gif)
 
 ## Step 3: Translating Java to C#
 
-After getting a sense of what the program does (it prints a binary representation of all numbers from 1 to n), I opened up Visual Studio, created a new project (or solution, as Visual Studio calls it). For the most part, it was somewhat easy, though I constantly had to remind myself to follow C# conventions and search the internet for alternatives as I went.
+After getting a sense of what the program does (it prints a binary representation of all numbers from 1 to n), I opened up Visual Studio, created a new project (or solution, as Visual Studio calls it). For the most part, it was somewhat easy, though I constantly had to remind myself to follow C#'s conventions, not Java's (given my background on it), and search the internet for alternatives as I went.
 
 ## 3.1: Node.cs
 
@@ -85,10 +71,10 @@ foreach(string s in output)
 
 Having completed the previous step with no reported syntax or compile errors within Visual Studio. I fire up the command line, compile the classes, which in turn gives me ```Program.exe``` and run the same commands I did back in step 2.
 
-![Running Program.exe](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/cs_program.gif)
+[![Running Program.exe](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/cs_program.gif)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW3/cs_program.gif)
 
 Given the results, I'd say this assignment was a success!
 
 ## Final thoughts
 
-Given this was my first hands-on experience working with C#, I have to say, the learning process wasn't as bad as I initally thought. Sure, it was rough because we had less than a week to learn the language, but I think with enough time and practice, I might come to embrace C#, maybe even use it as my preferred language given its widespread capabilities over Java.
+Given this was my first hands-on experience working with C#, I have to say, the learning process wasn't as bad as I initally thought. Sure, it was rough because we had less than a week to learn the language, but I think with enough time and practice, I might come to embrace C#, maybe even use it as my preferred language, given its widespread capabilities over Java.
