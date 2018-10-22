@@ -8,6 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <!--navigation bar-->
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -20,6 +21,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <!-- nav bar page links-->
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Converter", "MileConverter", "Home")</li>
                     <li>@Html.ActionLink("ColorChooser", "Create", "Color")</li>
@@ -31,10 +33,12 @@
         @RenderBody()
         <hr />
         <footer>
+            <!--copyright info-->
             <p>&copy; @DateTime.Now.Year - Manuel Larios</p>
         </footer>
     </div>
 
+    <!--load scripts-->
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
