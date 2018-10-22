@@ -212,7 +212,7 @@ Next, I created an ```ActionResult``` method in ```HomeController.cs``` using ``
 
 Given the results, I'd say the mile converter page was a success. Immediately after, I merged ```mileconverter``` back to ```master``` and worked on the next step.
 
-## Step 4: Writing ColorChooser
+## Step 4: Writing ColorChooser using ```POST```
 
 Satisfied all was well in the previous step, I went on to work on the color chooser page, which will take two inputs, in hexademical form and return the result of mixing the two colors together and display it to the user. To begin, I created another feature branch called ```colorchooser```. In it, I created a separate controller called ```ColorController.cs``` and created a web page called ```Create.cshtml```, using a mix of HTML and Razor which consisted of nothing more than two labels and textboses and a "Mix Colors" button which will send the input to the server. Because we were also tasked with ensuring the user enters hexadecimal colors, we had to create client, as well as server-side form validation. On the client-side, I wrote a ```@pattern``` attribute that asks the textbox to strictly search for a hex color value pattern and reject everything else as well as making sure it wasn't empty by adding the ```@required``` attribute.
 
