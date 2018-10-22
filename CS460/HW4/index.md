@@ -39,7 +39,7 @@ In ```index.cshtml```, I mostly updated the ```<p>``` and ```<h2>``` tags as wel
             Want to know how many millimeters there are in 26.3 miles? This calulator is for you. Uses query strings
             to send form data to the server, which performs the calculation and returns the answer in the requested page.
         </p>
-        <p><a class="btn btn-primary" href="MileConverter">Try it out &raquo;</a></p>
+        <p><a class="btn btn-primary" href="/Home/MileConverter">Try it out &raquo;</a></p>
     </div>
     <div class="col-md-6">
         <h2>Color Chooser</h2>
@@ -103,6 +103,8 @@ In addition, I also made a few changes to ```_layout.cshtml```, such as the ```@
 </html>
 ```
 
+[![Homework 4 home page](https://mlarios1.github.io/mlarios1.github.io/CS460/HW4/hw4_home.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW4/hw4_home.PNG)
+
 ## Step 3: Writing MileConverter using ```GET```
 
 After updating the home page, I went on to create ```MileConverter.cshtml```, using labels, a textbox, a set of radio buttons and a "Convert" button which will process the input passed by the user. The idea behind this page is that it would take user input in miles and convert it to metric units, such as millimeters, meters and so forth.
@@ -116,7 +118,7 @@ After updating the home page, I went on to create ```MileConverter.cshtml```, us
             <p>
                 <label for="mileinput">Miles</label>
                 <br />
-                <input type="number" name="mileinput" min="0" />
+                <input type="number" name="mileinput" min="0" step="0.000000000000001"/>
             </p>
         </div>
         <div class="col-sm-6">
