@@ -212,7 +212,7 @@ Next, I created an ```ActionResult``` method in ```HomeController.cs``` using ``
         }
 ```
 
-[>>See the MileConverter page in action](https://youtu.be/ePQQGcr_IIo)
+[>>WATCH: See the MileConverter page in action](https://youtu.be/ePQQGcr_IIo)
 
 Given the results, I'd say the mile converter page was a success. Immediately after, I merged ```mileconverter``` back to ```master``` and worked on the next step.
 
@@ -344,6 +344,6 @@ Last, but not least, I had to come up with a way to display the colors back to t
         }
 ```
 
-[>>See the color chooser page in action](https://youtu.be/PjHHsUWH1lc)
+[>>WATCH: See the color chooser page in action](https://youtu.be/PjHHsUWH1lc)
 
 After making sure the color chooser worked properly, I merged ```colorchooser``` back to ```master```, added comments to code where I thought needed some explanation and pushed it to my remote Git repository at GitHub.
