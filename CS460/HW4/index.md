@@ -105,7 +105,7 @@ In addition, I also made a few changes to ```_layout.cshtml```, such as the ```@
 
 [![Homework 4 home page](https://mlarios1.github.io/mlarios1.github.io/CS460/HW4/hw4_home.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW4/hw4_home.PNG)
 
-## Step 3: Writing MileConverter using ```GET```
+## Step 3: Writing MileConverter using GET
 
 After updating the home page, I went on to create ```MileConverter.cshtml```, using labels, a textbox, a set of radio buttons and a "Convert" button which will process the input passed by the user. The idea behind this page is that it would take user input in miles and convert it to metric units, such as millimeters, meters and so forth.
 
@@ -212,9 +212,11 @@ Next, I created an ```ActionResult``` method in ```HomeController.cs``` using ``
         }
 ```
 
+[>>>See the MileConverter page in action](https://youtu.be/ePQQGcr_IIo)
+
 Given the results, I'd say the mile converter page was a success. Immediately after, I merged ```mileconverter``` back to ```master``` and worked on the next step.
 
-## Step 4: Writing ColorChooser using ```POST```
+## Step 4: Writing ColorChooser using POST
 
 Satisfied all was well in the previous step, I went on to work on the color chooser page, which will take two inputs, in hexademical form and return the result of mixing the two colors together and display it to the user. To begin, I created another feature branch called ```colorchooser```. In it, I created a separate controller called ```ColorController.cs``` and created a web page called ```Create.cshtml```, using a mix of HTML and Razor which consisted of nothing more than two labels and textboses and a "Mix Colors" button which will send the input to the server. Because we were also tasked with ensuring the user enters hexadecimal colors, we had to create client, as well as server-side form validation. On the client-side, I wrote a ```@pattern``` attribute that asks the textbox to strictly search for a hex color value pattern and reject everything else as well as making sure it wasn't empty by adding the ```@required``` attribute.
 
@@ -341,5 +343,7 @@ Last, but not least, I had to come up with a way to display the colors back to t
             return View();
         }
 ```
+
+[>>>See the color chooser page in action](https://youtu.be/PjHHsUWH1lc)
 
 After making sure the color chooser worked properly, I merged ```colorchooser``` back to ```master```, added comments to code where I thought needed some explanation and pushed it to my remote Git repository at GitHub.
