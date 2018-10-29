@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[Tenants]
     [UnitNumber]	INT					NOT NULL, 
     [Description]	NVARCHAR(500)		NOT NULL, 
     [Checkbox]		BIT					NOT NULL, 
-    [Received]		DATETIME			NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    [Received]		DATETIME			NULL
     CONSTRAINT [PK_dbo.Users] PRIMARY KEY CLUSTERED ([ID] ASC)
 );
 

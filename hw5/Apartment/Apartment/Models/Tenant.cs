@@ -20,7 +20,7 @@ namespace Apartment.Models
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "Phone number must be in proper format. i.e. 555-555-5555")]
-        [Display(Name = "Phone Number"), Phone]
+        [Display(Name = "Phone number"), Phone]
         public string PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "This field cannot be left blank."), Display(Name = "Apartment name")]
@@ -34,9 +34,10 @@ namespace Apartment.Models
         [Required(ErrorMessage = "Please provide a description of your request."), Display(Name = "Description")]
         public string Description { get; set; }
 
+        [Display(Name = "Granted permission?")]
         public bool Checkbox { get; set; }
 
-        [Display(Name = "Date received"]
-        public DateTime Received { get; set; }
+        [Display(Name = "Received")]
+        public DateTime Received { get; set; } = DateTime.Now;
     }
 }

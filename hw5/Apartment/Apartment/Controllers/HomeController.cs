@@ -1,6 +1,10 @@
-﻿using System;
+﻿using Apartment.DAL;
+using Apartment.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -8,23 +12,75 @@ namespace Apartment.Controllers
 {
     public class HomeController : Controller
     {
+        private TenantContext db = new TenantContext();
+
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        // GET: Users
+        public ActionResult ViewForms()
         {
-            ViewBag.Message = "Your application description page.";
+            return View(db.Tenants.ToList());
+        }
 
+        // GET: Home/RequestForm
+        public ActionResult RequestForm()
+        {
             return View();
         }
 
-        public ActionResult Contact()
+        // POST: Home/RequestForm
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult RequestForm([Bind(Include = "ID, FirstName, LastName, PhoneNumber, ApartmentName, UnitNumber, Description, Checkbox, Received")] Tenant tenant)
         {
-            ViewBag.Message = "Your contact page.";
+            if (ModelState.IsValid)
+            {
+                db.Tenants.Add(tenant);
+                db.SaveChanges();
+                return RedirectToAction("ViewForms");
+            }
 
-            return View();
+            return View(tenant);
+        }
+
+        // GET: Users/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Tenant tenant = db.Tenants.Find(id);
+            if (tenant == null)
+            {
+                return HttpNotFound();
+            }
+            return View(tenant);
+        }
+
+        // POST: Users/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Tenant tenant = db.Tenants.Find(id);
+            db.Tenants.Remove(tenant);
+            db.SaveChanges();
+            return RedirectToAction("ViewForms");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }
