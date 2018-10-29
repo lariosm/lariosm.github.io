@@ -37,6 +37,6 @@ namespace Apartment.Models
         public bool Checkbox { get; set; }
 
         [Display(Name = "Date received")]
-        public DateTime Received { get; set; }
+        public DateTime Received { get; set; } = DateTime.Now;
     }
 }
