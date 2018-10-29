@@ -209,6 +209,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\RequestForm.cshtml" />
     <Content Include="Views\Home\ViewForms.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
