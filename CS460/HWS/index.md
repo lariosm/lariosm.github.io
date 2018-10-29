@@ -123,4 +123,75 @@ Suppose we have a user that wants to delete a request. How that works is, when t
 
 At this point, the user is very sure about deleting the request. Upon clicking the "Delete" button, the deletion will take place server-side. After that's complete, we'll want to take the user back to the "view requests" page. That's handled using a ```RedirectToAction()``` method which will do just that.
 
-Combined, we have what's known as a GET/POST/Redirect pattern that is commonly used by many web developers today.
+Combined, we have what's known as a GET/POST/Redirect pattern that is commonly used by web developers.
+
+## Step 6: Writing views
+
+When I wrote views in the past (see [Homework 4](https://mlarios1.github.io/mlarios1.github.io/CS460/HW4/)), I mostly wrote results using ViewBags. However, in this assignment, we were required to write strongly-typed views. For the most part, my views consisted mostly of lambda functions written in Razor to send or return information. Here's a snippet from my ViewForms page:
+
+```HTML
+@*Table header with generated names from model class*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApartmentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Checkbox)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Received)
+        </th>
+        <th></th>
+    </tr>
+
+@*Generates a row of information for each entry from the database*@
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApartmentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Checkbox)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Received)
+        </td>
+        <td>
+            @*Link to delete request*@
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+```
+
+As I wrote my views, the one I struggled getting to work was the arrangement of the tenant request form (```RequestForm.cshtml```), namely the description box. I got to stretch vertically using ```@rows = 10```. However, it just wouldn't stretch horizontally. After tweaking the code for nearly six hours straight, I found that the problem lied within ```site.css``` in which the width was specified to a fixed size. After commenting that part out, I found that the description box was finally able to stretch horizontally to the most the container would allow, which is what I wanted.
