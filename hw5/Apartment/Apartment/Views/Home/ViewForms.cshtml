@@ -7,8 +7,10 @@
 <h2 class="text-center">View Current Requests</h2>
 
 <p>
+    @*Takes user to tenant request page*@
     @Html.ActionLink("Create New Request", "RequestForm")
 </p>
+@*Table header with generated names from model class*@
 <table class="table">
     <tr>
         <th>
@@ -38,6 +40,7 @@
         <th></th>
     </tr>
 
+@*Generates a row of information for each entry from the database*@
 @foreach (var item in Model) {
     <tr>
         <td>
@@ -65,6 +68,7 @@
             @Html.DisplayFor(modelItem => item.Received)
         </td>
         <td>
+            @*Link to delete request*@
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>

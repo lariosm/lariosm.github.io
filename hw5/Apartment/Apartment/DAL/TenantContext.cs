@@ -7,6 +7,9 @@ using System.Web;
 
 namespace Apartment.DAL
 {
+    /// <summary>
+    /// Acts as a bridge between database and web application
+    /// </summary>
     public class TenantContext : DbContext
     {
         public TenantContext() : base("name=TenantForms")

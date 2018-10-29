@@ -37,6 +37,7 @@ namespace Apartment.Models
         [Display(Name = "Granted permission?")]
         public bool Checkbox { get; set; }
 
+        //DateTime.Now: Sets timestamp on Tenant object creation.
         [Display(Name = "Received")]
         public DateTime Received { get; set; } = DateTime.Now;
     }

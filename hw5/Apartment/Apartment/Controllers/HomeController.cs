@@ -12,6 +12,7 @@ namespace Apartment.Controllers
 {
     public class HomeController : Controller
     {
+        //Gateway to database for accessing and manipulating data.
         private TenantContext db = new TenantContext();
 
         public ActionResult Index()
@@ -19,7 +20,7 @@ namespace Apartment.Controllers
             return View();
         }
 
-        // GET: Users
+        // GET: Home/Viewforms
         public ActionResult ViewForms()
         {
             return View(db.Tenants.ToList());
@@ -32,14 +33,14 @@ namespace Apartment.Controllers
         }
 
         // POST: Home/RequestForm
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        //[Bind] data annotation prevents any overposting attacks
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult RequestForm([Bind(Include = "ID, FirstName, LastName, PhoneNumber, ApartmentName, UnitNumber, Description, Checkbox, Received")] Tenant tenant)
-        {
-            if (ModelState.IsValid)
+        {   
+            if (ModelState.IsValid) //Are required fields filled out?
             {
+                //adds form infomation to database
                 db.Tenants.Add(tenant);
                 db.SaveChanges();
                 return RedirectToAction("ViewForms");
@@ -48,22 +49,23 @@ namespace Apartment.Controllers
             return View(tenant);
         }
 
-        // GET: Users/Delete/5
+        // GET: Home/Delete/[ID]
         public ActionResult Delete(int? id)
         {
-            if (id == null)
+            if (id == null) //Non-existant ID?
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest); //Returns a 400 error
             }
-            Tenant tenant = db.Tenants.Find(id);
-            if (tenant == null)
+            Tenant tenant = db.Tenants.Find(id); //looks up tenant by ID
+            if (tenant == null) //Non-existant tenant object? Return an error page.
             {
                 return HttpNotFound();
             }
             return View(tenant);
         }
 
-        // POST: Users/Delete/5
+        // POST: Home/Delete/[ID]
+        //Deletes tenant request from database.
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -74,6 +76,7 @@ namespace Apartment.Controllers
             return RedirectToAction("ViewForms");
         }
 
+        //garbage collector for database
         protected override void Dispose(bool disposing)
         {
             if (disposing)
