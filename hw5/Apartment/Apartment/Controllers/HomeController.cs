@@ -23,7 +23,7 @@ namespace Apartment.Controllers
         // GET: Home/Viewforms
         public ActionResult ViewForms()
         {
-            return View(db.Tenants.ToList());
+            return View(db.Tenants.OrderBy(Tenant => Tenant.Received).ToList());
         }
 
         // GET: Home/RequestForm
