@@ -25,21 +25,6 @@ namespace Apartment.Controllers
             return View(db.Tenants.ToList());
         }
 
-        // GET: Home/Details/[ID]
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Tenant tenant = db.Tenants.Find(id);
-            if (tenant == null)
-            {
-                return HttpNotFound();
-            }
-            return View(tenant);
-        }
-
         // GET: Home/RequestForm
         public ActionResult RequestForm()
         {
@@ -57,7 +42,7 @@ namespace Apartment.Controllers
             {
                 db.Tenants.Add(tenant);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("ViewForms");
             }
 
             return View(tenant);
@@ -86,7 +71,7 @@ namespace Apartment.Controllers
             Tenant tenant = db.Tenants.Find(id);
             db.Tenants.Remove(tenant);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("ViewForms");
         }
 
         protected override void Dispose(bool disposing)

@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Apartment.Models.Tenant>
 
 @{
-    ViewBag.Title = "ViewForms";
+    ViewBag.Title = "View Current Requests";
 }
 
-<h2>ViewForms</h2>
+<h2 class="text-center">View Current Requests</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Request", "RequestForm")
 </p>
 <table class="table">
     <tr>
@@ -65,7 +65,6 @@
             @Html.DisplayFor(modelItem => item.Received)
         </td>
         <td>
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>
