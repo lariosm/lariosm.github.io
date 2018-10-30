@@ -194,4 +194,14 @@ When I wrote views in the past (see [Homework 4](https://mlarios1.github.io/mlar
     </tr>
 ```
 
-As I wrote my views, the one I struggled getting to work was the arrangement of the tenant request form (```RequestForm.cshtml```), namely the description box. I got to stretch vertically using ```@rows = 10```. However, it just wouldn't stretch horizontally. After tweaking the code for nearly six hours straight, I found that the problem lied within ```site.css``` in which the width was specified to a fixed size. After commenting that part out, I found that the description box was finally able to stretch horizontally to the most the container would allow, which is what I wanted.
+As I wrote my views, the one I struggled getting to work was the arrangement of the tenant request form (```RequestForm.cshtml```), namely the description box. I got it to stretch vertically using ```@rows = 10```. However, it just wouldn't stretch horizontally. After tweaking the code for nearly six hours straight, I found that the problem lied within ```site.css``` in which the width was specified to a fixed size. After commenting that part out, I found that the description box was now able to stretch horizontally to the most the container would allow, which is what I wanted.
+
+```
+/* Set width on the form input elements since they're 100% wide by default
+input,
+select,
+textarea {
+    max-width: 280px; //The culprit to my problem.
+}
+*/
+```
