@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WWImporters.Models;
@@ -12,26 +13,37 @@ namespace WWImporters.Controllers
     {
         private WWIContext db = new WWIContext();
 
-        public ActionResult Index()
-        {
-            return View();
-        }
-
         [HttpGet]
         public ActionResult Index(string query)
         {
-            IEnumerable<Person> people = db.People.Where(p => p.FullName.Contains(query));
-            if(people != null)
+            IEnumerable<Person> people = db.People.Where(p => p.FullName.Contains(null));
+            ViewBag.ShowError = false;
+
+            if(!string.IsNullOrWhiteSpace(query))
             {
-                Debug.WriteLine("I found people");
-                Debug.WriteLine(DateTime.Now);
-                return View(people);
+                people = db.People.Where(p => p.FullName.Contains(query));
+                if (!people.Any())
+                {
+                    ViewBag.ShowError = true;
+                }
             }
-            else
+
+            return View(people.ToList());
+        }
+
+        // GET: People/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
             {
-                ViewBag.Message = "No results found.";
-                return View();
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            Person person = db.People.Find(id);
+            if (person == null)
+            {
+                return HttpNotFound();
+            }
+            return View(person);
         }
 
         public ActionResult About()

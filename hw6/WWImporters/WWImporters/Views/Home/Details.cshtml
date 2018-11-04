@@ -1,0 +1,60 @@
+﻿@model WWImporters.Models.Person
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 details-box">
+            <h2>@Html.DisplayFor(model => model.FullName)</h2>
+            <hr style="border-color: black;" />
+            <dl class="dl-horizontal">
+                <dt>
+                    Preferred name:
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PreferredName)
+                </dd>
+
+                <dt>
+                    Phone:
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PhoneNumber)
+                </dd>
+
+                <dt>
+                    Fax:
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.FaxNumber)
+                </dd>
+
+                <dt>
+                    E-mail:
+                </dt>
+
+                <dd>
+                    <a href="mailto:@Html.DisplayFor(model => model.EmailAddress)">@Html.DisplayFor(model => model.EmailAddress)</a>
+                </dd>
+
+                <dt>
+                    Member since:
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ValidFrom)
+                </dd>
+            </dl>
+        </div>
+        <div class="col-sm-4">
+            <img src="https://via.placeholder.com/225?text=Photo" alt="Profile photo" class="center-block"/>
+        </div>
+    </div>
+</div>
