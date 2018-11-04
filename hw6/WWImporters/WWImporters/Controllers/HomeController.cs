@@ -18,13 +18,18 @@ namespace WWImporters.Controllers
         {
             IEnumerable<Person> people = db.People.Where(p => p.FullName.Contains(null));
             ViewBag.ShowError = false;
+            ViewBag.ResultString = "";
 
             if(!string.IsNullOrWhiteSpace(query))
             {
-                people = db.People.Where(p => p.FullName.Contains(query));
+                people = db.People.Where(peopleItem => peopleItem.FullName.Contains(query));
                 if (!people.Any())
                 {
                     ViewBag.ShowError = true;
+                }
+                else
+                {
+                    ViewBag.ResultString = "Names matching your search: \"" + query + "\"";
                 }
             }
 
@@ -44,20 +49,6 @@ namespace WWImporters.Controllers
                 return HttpNotFound();
             }
             return View(person);
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
     }
 }

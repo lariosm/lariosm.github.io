@@ -1,12 +1,13 @@
 ﻿@model IEnumerable<WWImporters.Models.Person>
 
 @{
-                /**/
-
-                ViewBag.Title = "Index";
+    ViewBag.Title = "Home";
 }
 
-<h2>People Search</h2>
+<br />
+<br />
+
+<h2 style="text-align: center;">Client Search</h2>
 
 <form action="/Home/Index" method="get">
     <div class="row">
@@ -23,6 +24,10 @@
 @if (ViewBag.ShowError)
 {
     <h5 style="color: #8B0000">No results found.</h5>
+}
+else
+{
+    <h5>@ViewBag.ResultString</h5>
 }
 
 
