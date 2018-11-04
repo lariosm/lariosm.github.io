@@ -13,12 +13,28 @@
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
-    white-space: normal;
+    text-align: left;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.dl-horizontal dd {
+    margin-left: 0;
+}
+
+.details-box {
+    background-color: lightgrey;
+    border: 2px solid;
+    padding: 10px 25px;
+}
+
+#search {
+    width: 90%;
+    padding: 12px;
+    height: 43px;
+    border-radius: 5px 0 0 5px;
+}
+
+#submit {
+    margin-left: 0;
+    border-radius: 0 5px 5px 0;
+    padding: 8px;
 }

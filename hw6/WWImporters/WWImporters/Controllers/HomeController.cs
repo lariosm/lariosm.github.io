@@ -1,30 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using WWImporters.Models;
 
 namespace WWImporters.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private WWIContext db = new WWIContext();
+
+        [HttpGet]
+        public ActionResult Index(string query)
         {
-            return View();
+            IEnumerable<Person> people = db.People.Where(p => p.FullName.Contains(null));
+            ViewBag.ShowError = false;
+            ViewBag.ResultString = "";
+
+            if(!string.IsNullOrWhiteSpace(query))
+            {
+                people = db.People.Where(peopleItem => peopleItem.FullName.Contains(query));
+                if (!people.Any())
+                {
+                    ViewBag.ShowError = true;
+                }
+                else
+                {
+                    ViewBag.ResultString = "Names matching your search: \"" + query + "\"";
+                }
+            }
+
+            return View(people.ToList());
         }
 
-        public ActionResult About()
+        // GET: People/Details/5
+        public ActionResult Details(int? id)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Person person = db.People.Find(id);
+            if (person == null)
+            {
+                return HttpNotFound();
+            }
+            return View(person);
         }
     }
 }
