@@ -65,12 +65,16 @@ namespace WWImporters.Controllers
                 ViewBag.PrimaryContact = true; //Person has primary contact
                 vm.Customer = vm.Person.Customers2.FirstOrDefault(); //Get customer info
 
-                //calculate base total
-                var baseTotal = vm.Customer.Orders.SelectMany(i => i.Invoices)
+                //get all invoices and invoice lines
+                var baseCode = vm.Customer.Orders.SelectMany(i => i.Invoices)
                                                   .SelectMany(il => il.InvoiceLines);
 
-                ViewBag.GrossSales = baseTotal.Sum(e => e.ExtendedPrice); //calculate gross sales
-                ViewBag.GrossProfit = baseTotal.Sum(lp => lp.LineProfit); //calculate total profit
+                ViewBag.GrossSales = baseCode.Sum(e => e.ExtendedPrice); //calculate gross sales
+                ViewBag.GrossProfit = baseCode.Sum(lp => lp.LineProfit); //calculate total profit
+
+                vm.InvoiceLine = baseCode.OrderByDescending(lp => lp.LineProfit)
+                                         .Take(10)
+                                         .ToList();
             }
 
             return View(vm);
