@@ -114,6 +114,8 @@ Having built the search engine, all that was left to do was build the ```Details
 
 <br />
 <br />
+
+@*Displays Person information*@
 <div class="container">
     <div class="row">
         <div class="col-sm-8 details-box">
@@ -156,10 +158,11 @@ Having built the search engine, all that was left to do was build the ```Details
                 </dd>
             </dl>
         </div>
+
+        @*Profile photo placeholder*@
         <div class="col-sm-4">
             <img src="https://via.placeholder.com/225?text=Photo" alt="Profile photo" class="center-block"/>
         </div>
     </div>
 </div>
-
 ```
