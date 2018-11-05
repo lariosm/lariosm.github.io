@@ -10,7 +10,7 @@
 @*Displays Person information*@
 <div class="container">
     <div class="row">
-        <div class="col-sm-8 details-box">
+        <div class="col-sm-6 details-box">
             <h2>@Html.DisplayFor(model => model.Person.FullName)</h2>
             <hr style="border-color: black;" />
             <dl class="dl-horizontal">
@@ -52,8 +52,53 @@
         </div>
 
         @*Profile photo placeholder*@
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <img src="https://via.placeholder.com/225?text=Photo" alt="Profile photo" class="center-block"/>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-sm-6 details-box">
+            <h2>Company Profile</h2>
+            <hr style="border-color: black;" />
+            <dl class="dl-horizontal">
+                <dt>
+                    Company name:
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Customer.CustomerName)
+                </dd>
+
+                <dt>
+                    Phone:
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Customer.PhoneNumber)
+                </dd>
+
+                <dt>
+                    Fax:
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Customer.FaxNumber)
+                </dd>
+
+                <dt>
+                    Website:
+                </dt>
+                <dd>
+                    <a href="@Html.DisplayFor(model => model.Customer.WebsiteURL)">@Html.DisplayFor(model => model.Customer.WebsiteURL)</a>
+                </dd>
+
+                <dt>
+                    Member since:
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Customer.ValidFrom)
+                </dd>
+            </dl>
         </div>
     </div>
 </div>

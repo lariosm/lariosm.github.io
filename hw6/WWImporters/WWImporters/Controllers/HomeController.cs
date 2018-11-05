@@ -45,7 +45,8 @@ namespace WWImporters.Controllers
         // GET: People/Details/5
         public ActionResult Details(int? id)
         {
-            DashboardVM vm = new DashboardVM();
+            DashboardVM vm = new DashboardVM(); //Initalize view model
+            ViewBag.PrimaryContact = false; //On initialization, person doesn't have primary contact.
 
             if (id == null) //Non-existant Person ID?
             {
@@ -56,6 +57,13 @@ namespace WWImporters.Controllers
             {
                 return HttpNotFound(); //Send out a 404 not found error.
             }
+
+            if(vm.Person.Customers2.Any()) //Is person a primary contact?
+            {
+                ViewBag.PrimaryContact = true; //Person has primary contact
+                vm.Customer = vm.Person.Customers2.FirstOrDefault();
+            }
+
             return View(vm);
         }
     }
