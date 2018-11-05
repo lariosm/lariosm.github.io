@@ -207,7 +207,9 @@ textarea {
 */
 ```
 
-Step 7: At this stage, my views have all been written and all that's left to do is demo my website to confirm it works.
+## Step 7: Demoing the Website
+
+At this stage, my views have all been written and all that's left to do is demo my website to confirm it works.
 [Click here to watch it in action.](https://www.youtube.com/watch?v=FY6gr9Uas9c&feature=youtu.be)
 
 NOTE: It seems like the video is not scaled right. I'm going to look into this and revise it if I have time. But for the most part it should be viewable. Well, at least from a 20 inch monitor.
