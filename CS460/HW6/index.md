@@ -16,7 +16,7 @@ Given how we've been working with ASP.NET MVC for about three weeks now, there w
 
 After spending some time playing with LINQ using LINQPad and receiving guidance from my peers and my professor, I started out by importing the database in Microsoft SQL Server Management Studio and establishing a connection to it to access in Visual Studio. Next, I generated all the models (minus the archives) and placed them in my ```Models``` folder, while placing ```WWIContext.cs``` in to my Data Access Layer (DAL) folder.
 
-[Screenshot of solution pane with model classes]()
+[![Solution pane with models](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/model_imports.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/model_imports.PNG)
 
 ## Step 3: Creating a Serach Engine (Feature #1)
 
@@ -101,6 +101,8 @@ else
 }
 ```
 
+[![Search engine page](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/searchengine.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/searchengine.PNG)
+
 ## Step 5: Building the Details Page
 
 Having built the search engine, all that was left to do was build the ```Details``` page so that it displays a ```Person```'s name, phone number, photo and so forth. To accomplish this, I created strongly-typed views so that it accesses the database and returns related information about the ```Person``` in question.
@@ -166,3 +168,5 @@ Having built the search engine, all that was left to do was build the ```Details
     </div>
 </div>
 ```
+
+[![Simple details page](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/detailspage.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/detailspage.PNG)
