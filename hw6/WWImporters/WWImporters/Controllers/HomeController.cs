@@ -52,7 +52,9 @@ namespace WWImporters.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest); //Send out a 400 bad request error.
             }
-            vm.Person = db.People.Find(id);
+
+            vm.Person = db.People.Find(id); //Find person object associated with that ID
+
             if (vm.Person == null) //Non-existant Person object?
             {
                 return HttpNotFound(); //Send out a 404 not found error.
@@ -61,7 +63,14 @@ namespace WWImporters.Controllers
             if(vm.Person.Customers2.Any()) //Is person a primary contact?
             {
                 ViewBag.PrimaryContact = true; //Person has primary contact
-                vm.Customer = vm.Person.Customers2.FirstOrDefault();
+                vm.Customer = vm.Person.Customers2.FirstOrDefault(); //Get customer info
+
+                //calculate base total
+                var baseTotal = vm.Customer.Orders.SelectMany(i => i.Invoices)
+                                                  .SelectMany(il => il.InvoiceLines);
+
+                ViewBag.GrossSales = baseTotal.Sum(e => e.ExtendedPrice); //calculate gross sales
+                ViewBag.GrossProfit = baseTotal.Sum(lp => lp.LineProfit); //calculate total profit
             }
 
             return View(vm);
