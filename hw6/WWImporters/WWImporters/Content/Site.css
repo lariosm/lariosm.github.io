@@ -3,6 +3,21 @@
     padding-bottom: 20px;
 }
 
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    text-align: left;
+    padding: 10px;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
