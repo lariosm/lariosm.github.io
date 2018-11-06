@@ -1,12 +1,13 @@
 # Homework 6
 
-In this week's assignment, we were tasked with using a pre-existing complex database to create a "people" search engine that looks up people from the database and displays relevant results based on the keywords passed to the search box. In addition, we were also required to create a page where users can view details about a searched person, such as their contact info, their company profile and the sales World Wide Importers (a fictitious company created by Microsoft) made to it.
+In this week's assignment, we were tasked with using a pre-existing complex database to create a "people" search engine that looks up people from the database and displays relevant results based on the keywords passed to the search box. In addition, we were also required to create a page where users can view details about a searched person, such as their contact info, their company profile and the sales World Wide Importers (WWI) made to it.
 
 ## Links
 
 * Assignment page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW6_1819.html)
 * Code repository referencing this work can be found [here](https://github.com/mlarios1/CS460/tree/master/hw6)
 * Clone repo link: [https://github.com/mlarios1/CS460.git](https://github.com/mlarios1/CS460.git)
+* Video demo link: See step 7 for video link
 
 ## Step 1: Preparation
 
@@ -170,3 +171,82 @@ Having built the search engine, all that was left to do was build the ```Details
 ```
 
 [![Simple details page](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/detailspage.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/detailspage.PNG)
+
+## Step 6: Upgrading the Details Page (Feature #2)
+
+At this point, I already have a working search engine and a ```Details``` page that displays a ```Person```'s contact info. Now we're being asked to populate the ```Details``` page with details about their company and WWI's sales to it, that is if the ```Person``` in question is a customer. To accomplish this, I started out by creating a "view model", which will allow me to return multiple model objects to the view to display the required information.
+
+```C#
+/// <summary>
+/// Allows multiple objects to be returned to the view
+/// </summary>
+public class DashboardVM
+{
+	/// <summary>
+        /// Person object
+        /// </summary>
+        public Person Person { get; set; }
+
+        /// <summary>
+        /// Customer object
+        /// </summary>
+        public Customer Customer { get; set; }
+
+        /// <summary>
+        /// List of invoice objects
+        /// </summary>
+        public IEnumerable<Invoice> Invoice { get; set; }
+
+        /// <summary>
+        /// List of InvoiceLine objects
+        /// </summary>
+        public IEnumerable<InvoiceLine> InvoiceLine { get; set; }
+}
+```
+
+Next, I refactored the ```Details()``` method in ```HomeController.cs``` so that below the code shown back in Step 3, it determines whether or not the person searched is a primary contact. If so, it grabs the customer information and performs the necessary calcuations to find the gross sales and profit, as well as return the 10 most profitable items the customer has purchased from WWI. Had it been the other way around, it would've indicated that the ```Person``` is a salesperson and therefore would not return anything other than their basic contact info.
+
+```C#
+if(vm.Person.Customers2.Any()) //Is person a primary contact?
+{
+	ViewBag.PrimaryContact = true; //Person has primary contact
+	vm.Customer = vm.Person.Customers2.FirstOrDefault(); //Get customer info
+
+	//get all invoices and invoice lines
+	var baseCode = vm.Customer.Orders.SelectMany(i => i.Invoices)
+					 .SelectMany(il => il.InvoiceLines);
+
+	ViewBag.GrossSales = baseCode.Sum(e => e.ExtendedPrice); //calculate gross sales
+	ViewBag.GrossProfit = baseCode.Sum(lp => lp.LineProfit); //calculate total profit
+
+	vm.InvoiceLine = baseCode.OrderByDescending(lp => lp.LineProfit)
+				 .Take(10)
+				 .ToList();
+}
+```
+
+As I worked on refactoring the ```Details()``` method, I also worked on modifying the ```Details``` page so that it not only displays the ```Person```'s contact info, but also the other information mentioned above (if needed), all of which we get from the controller after processing.
+
+Here's a sample of the modified ```Details``` page.
+```HTML
+<div class="row">
+	<div class="col-sm-6 details-box">
+		<h2>Purchase History Summary</h2>
+		<hr style="border-color: black;"/>
+		<dl class="dl-horizontal">
+			<dt>Orders:</dt>
+			<dd>@Html.DisplayFor(model => model.Customer.Orders.Count)</dd>
+
+			<dt>Gross sales:</dt>
+			<dd>@String.Format("{0:C}", ViewBag.GrossSales)</dd>
+
+			<dt>Gross profit:</dt>
+			<dd>@String.Format("{0:C}", ViewBag.GrossProfit)</dd>
+		</dl>
+	</div>
+</div>
+```
+
+## Step 7: Demoing the Final Product
+
+After all was said and done, the only thing left to do at this point is test the program to confirm my website works as it's supposed to. Follow this link to view the demo.
