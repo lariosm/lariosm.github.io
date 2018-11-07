@@ -7,7 +7,7 @@ Similar to our last assignment, we were tasked with writing a ASP.NET MVC web ap
 * Assignment page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW5_1819.html)
 * Code repository referencing this work can be found [here](https://github.com/mlarios1/CS460/tree/master/hw5)
 * Clone repo link: [https://github.com/mlarios1/CS460.git](https://github.com/mlarios1/CS460.git)
-* Video demo link: [https://youtu.be/uTuMm2mPEgg](https://youtu.be/uTuMm2mPEgg)
+* Video demo link: [https://youtu.be/DFnHS4PDMIA](https://youtu.be/DFnHS4PDMIA)
 
 ## Step 1: Preparation
 Given the nature of this assignment, there was not much new material to learn. However, I had to re-familiarize myself with SQL syntax (MySQL in particular), given I had not worked with it since June 2018. Soon after, I went on to learn about Transact-SQL (T-SQL) since we're to create a table that Visual Studio's built-in LocalDB can work with.
@@ -210,4 +210,4 @@ textarea {
 ## Step 7: Demoing the Website
 
 At this stage, my views have all been written and all that's left to do is demo my website to confirm it works.
-[Click here to view the demo.](https://youtu.be/uTuMm2mPEgg)
+[Click here to view the demo.](https://youtu.be/DFnHS4PDMIA)
