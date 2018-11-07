@@ -7,7 +7,7 @@ In this week's assignment, we were tasked with using a pre-existing complex data
 * Assignment page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW6_1819.html)
 * Code repository referencing this work can be found [here](https://github.com/mlarios1/CS460/tree/master/hw6)
 * Clone repo link: [https://github.com/mlarios1/CS460.git](https://github.com/mlarios1/CS460.git)
-* Video demo link: See step 7 for video link
+* Video demo link: [https://youtu.be/GMYBfBYZiug](https://youtu.be/GMYBfBYZiug)
 
 ## Step 1: Preparation
 
@@ -249,4 +249,4 @@ Here's a sample of the modified ```Details``` page.
 
 ## Step 7: Demoing the Final Product
 
-After all was said and done, the only thing left to do at this point is test the program to confirm my website works as it's supposed to. Follow this link to view the demo.
+After all was said and done, the only thing left to do at this point is test the program to confirm my website works as it's supposed to. [Follow this link to view the demo](https://youtu.be/GMYBfBYZiug).
