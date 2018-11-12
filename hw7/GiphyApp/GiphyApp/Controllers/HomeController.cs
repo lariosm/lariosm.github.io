@@ -11,7 +11,6 @@ namespace GiphyApp.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            string apiKey = System.Web.Configuration.WebConfigurationManager.AppSettings["GiphyKey"];
             return View();
         }
     }
