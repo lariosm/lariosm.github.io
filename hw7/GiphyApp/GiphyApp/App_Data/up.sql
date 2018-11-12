@@ -6,5 +6,5 @@ CREATE TABLE [dbo].[AccessLogs]
 	[AgentString] 	NVARCHAR(256)		NOT NULL,
 	[TimeStamp] 	DATETIME			NOT NULL,
 
-	CONSTANT [PK_dbo.AccessLogs] PRIMARY KEY CLUSTERED ([ID] ASC)
+	CONSTRAINT [PK_dbo.AccessLogs] PRIMARY KEY CLUSTERED ([ID] ASC)
 );

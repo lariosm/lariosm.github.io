@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GiphyApp.DAL;
+using GiphyApp.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,6 +12,8 @@ namespace GiphyApp.Controllers
 {
     public class TranslateController : Controller
     {
+        private AccessLogsContext db = new AccessLogsContext();
+
         /// <summary>
         /// Sends request to GIPHY and returns it in JSON form
         /// </summary>
@@ -32,6 +36,18 @@ namespace GiphyApp.Controllers
             var parsedData =  new System.Web.Script.Serialization.JavaScriptSerializer()
                                   .DeserializeObject(new StreamReader(dataStream)
                                   .ReadToEnd());
+
+            //*****Requests logging code*****
+            AccessLogs log = new AccessLogs();
+
+            log.IPAddress = Request.UserHostAddress; //logs client's IP address
+            log.KeyWord = word; //logs client's requested word
+            log.AgentString = Request.UserAgent; //logs client's browser information
+
+            //saves current request to database
+            db.Logs.Add(log);
+            db.SaveChanges();
+            //*******************************
 
             //return the (JSON) data
             return Json(parsedData, JsonRequestBehavior.AllowGet);
