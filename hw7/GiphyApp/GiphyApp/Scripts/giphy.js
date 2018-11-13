@@ -47,10 +47,10 @@ function main() {
             var input = document.getElementById("textbox").value; //Gets text from input box.
             input = input.split(" "); //Splits words into an array.
             input = input[input.length - 1]; //Get the last word in "array"
-            input = input.toLowerCase(); //Converts word to all lowercase to check against "boring" words
+            var word = input.toLowerCase(); //Converts word to all lowercase to check against "boring" words
 
             //Checks if the word is a "boring" word
-            if (boringWords.includes(input)) { //It's a boring word
+            if (boringWords.includes(word)) { //It's a boring word
                 $("#live-display").append("<label>" + input + "</label>&nbsp;") //Displays word as plain text
             }
             else { //It's a "fun" word
