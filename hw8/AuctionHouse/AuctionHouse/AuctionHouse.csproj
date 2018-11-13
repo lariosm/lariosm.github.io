@@ -88,6 +88,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\AuctionHouseDB.mdf" />
+    <Content Include="App_Data\AuctionHouseDB_log.ldf">
+      <DependentUpon>AuctionHouseDB.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\down.sql" />
     <Content Include="App_Data\up.sql" />
     <Content Include="Global.asax" />
