@@ -1,0 +1,27 @@
+CREATE TABLE [dbo].[Sellers]
+(
+	[ID]	INT IDENTITY (1,1)	NOT NULL	PRIMARY KEY,
+	[Name]	NVARCHAR(30)		NOT NULL
+);
+
+CREATE TABLE [dbo].[Buyers]
+(
+	[ID]	INT IDENTITY (1,1)	NOT NULL	PRIMARY KEY,
+	[Name]	NVARCHAR(30)		NOT NULL
+);
+
+CREATE TABLE [dbo].[Items]
+(
+	[ItemID]		INT IDENTITY (1,1)						NOT NULL	PRIMARY KEY,
+	[Name]			NVARCHAR(100)							NOT NULL,
+	[Description]	NVARCHAR(MAX)							NOT NULL,
+	[Seller]		INT FOREIGN KEY REFERENCES Sellers(ID)	NOT NULL
+);
+
+CREATE TABLE [dbo].[Bids]
+(
+	[ItemID]		INT FOREIGN KEY REFERENCES Items(ItemID)	NOT NULL,
+	[Bidder]		INT FOREIGN KEY REFERENCES Buyers(ID)		NOT NULL,
+	[Price]			NVARCHAR(20)								NOT NULL,
+	[TimeStamp]		DATETIME									NOT NULL,
+);
