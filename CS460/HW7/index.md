@@ -69,7 +69,7 @@ Index.cshtml:
     <script src="~/Scripts/giphy.js" type="text/javascript"></script>
 }
 ```
-<PHOTO OF VIEW>
+[![Simple view](https://mlarios1.github.io/mlarios1.github.io/CS460/HW7/view.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW7/view.PNG)
   
 ## Step 3: Creating and Programming Controllers
 
