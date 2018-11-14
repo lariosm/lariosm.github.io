@@ -7,7 +7,7 @@ For our next assignment, we were tasked with creating a responsive, single-page 
 * Assignment page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW7_1819.html)
 * Code repository referencing this work can be found [here](https://github.com/mlarios1/CS460/tree/master/hw7)
 * Clone repo link: [https://github.com/mlarios1/CS460.git](https://github.com/mlarios1/CS460.git)
-* Video demo link: TBA
+* Video demo link: [https://youtu.be/LYGLfIfKgsE](https://youtu.be/LYGLfIfKgsE)
 
 ## Step 1: Preparation
 
@@ -205,7 +205,7 @@ function giphyRequest(keyWord) {
 }
 ```
 
-If the request returns a JSON-formatted response, then it will call on ```displayGIF()``` to display the ```.gif``` image from GIPHY to the browser. Otherwise, it will call on ```ajaxError()``` to inform the user to check if the API key used is active.
+If the request returns a JSON-formatted response, then it will call on ```displayGIF()``` to display the ```.gif``` image from GIPHY to the browser. Otherwise, it will call on ```ajaxError()``` to inform the user it could not load the image due to some technical problem (i.e. servers are down, reached request limit, etc.).
 
 ```JavaScript
 /**
@@ -224,7 +224,7 @@ function displayGIF(imageData) {
  * Displays AJAX error as pop-up alert
  */
 function ajaxError() {
-    alert("Check that your API key is active.");
+    alert("Unable to load image.");
 }
 ```
 
@@ -299,4 +299,4 @@ db.SaveChanges();
 
 ## Step 7: Demo of Final Product
 
-At this point, the assignment is pretty much complete. All that's left to do is confirm the application works as intended. Follow this link to view the demo.
+At this point, the assignment is pretty much complete. All that's left to do is confirm the application works as intended. [Follow this link to view the demo](https://youtu.be/LYGLfIfKgsE).
