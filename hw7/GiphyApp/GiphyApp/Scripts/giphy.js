@@ -35,7 +35,7 @@ function displayGIF(imageData) {
  * Displays AJAX error as pop-up alert
  */
 function ajaxError() {
-    alert("Check that your API key is active.");
+    alert("Unable to load image");
 }
 
 /**
