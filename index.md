@@ -16,4 +16,4 @@ All the code referenced is for the CS46X Software Engineering course sequence an
 * [Homework 4](https://mlarios1.github.io/mlarios1.github.io/CS460/HW4/): MVC Application (no DB)
 * [Homework 5](https://mlarios1.github.io/mlarios1.github.io/CS460/HW5/): MVC Application (with single DB)
 * [Homework 6](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/): MVC Application (with pre-existing relational DB)
-* [Homework 7 (In progress)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW7/): MVC Application (AJAX single-page app)
+* [Homework 7](https://mlarios1.github.io/mlarios1.github.io/CS460/HW7/): MVC Application (AJAX single-page app)
