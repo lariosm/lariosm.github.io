@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url("bgtheme.jpeg")
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -16,3 +17,10 @@ textarea {
     max-width: 280px;
 }
 
+#custom {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    height: 100%;
+}

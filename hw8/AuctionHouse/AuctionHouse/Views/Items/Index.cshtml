@@ -4,42 +4,49 @@
     ViewBag.Title = "Reginald's Ancient Antiquities Auction House";
 }
 
-<h2 style="text-align: center;">Reginald's Ancient Antiquities Auction House</h2>
+<div class="container">
+    <h2 style="text-align: center;">Reginald's Ancient Antiquities Auction House</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            Seller name
-        </th>
-        <th>
-            Item name
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th></th>
-    </tr>
+    <table class="table table-responsive">
+        <tr>
+            <th>
+                Seller name
+            </th>
+            <th>
+                Item name
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Seller1.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Seller1.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            @Html.ActionLink("Edit listing", "Edit", new { id = item.ID }, new { @class = "dropdown-item" })
+                            @Html.ActionLink("View listing", "Details", new { id = item.ID }, new { @class = "dropdown-item" })
+                            @Html.ActionLink("Delete listing", "Delete", new { id = item.ID }, new { @class = "dropdown-item" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
 
-</table>
+    </table>
+</div>
