@@ -17,7 +17,7 @@ namespace AuctionHouse.Controllers
         // GET: Items
         public ActionResult Index()
         {
-            var items = db.Items.Include(i => i.Seller1);
+            var items = db.Items.Include(i => i.Seller);
             return View(items.ToList());
         }
 

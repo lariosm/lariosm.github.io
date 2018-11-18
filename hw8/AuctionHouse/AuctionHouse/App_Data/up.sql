@@ -15,7 +15,7 @@ CREATE TABLE [dbo].[Items]
 	[ID]			INT IDENTITY (1001,1)						NOT NULL	PRIMARY KEY,
 	[Name]			NVARCHAR(100)								NOT NULL,
 	[Description]	NVARCHAR(MAX)								NOT NULL,
-	[Seller]		INT FOREIGN KEY REFERENCES Sellers(ID)		NOT NULL
+	[SellerID]		INT FOREIGN KEY REFERENCES Sellers(ID)		NOT NULL
 );
 
 CREATE TABLE [dbo].[Bids]
@@ -37,7 +37,7 @@ INSERT INTO [dbo].[Buyers] (Name) VALUES
 	('Tom McMasters'),
 	('Otto Vanderwall');
 
-INSERT INTO [dbo].[Items] (Name, Description, Seller) VALUES
+INSERT INTO [dbo].[Items] (Name, Description, SellerID) VALUES
 	('Abraham Lincoln Hammer', 'A bench mallet fashioned from a broken rail-splitting maul in 1829 and owned by Abraham Lincoln', 3),
 	('Albert Einsteins Telescope', 'A brass telescope owned by Albert Einstein in Germany, circa 1927', 1),
 	('Bob Dylan Love Poems', 'Five versions of an original unpublished, handwritten, love poem by Bob Dylan', 2);

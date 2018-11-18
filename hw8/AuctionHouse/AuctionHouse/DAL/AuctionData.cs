@@ -30,8 +30,8 @@ namespace AuctionHouse.Models
 
             modelBuilder.Entity<Seller>()
                 .HasMany(e => e.Items)
-                .WithRequired(e => e.Seller1)
-                .HasForeignKey(e => e.Seller)
+                .WithRequired(e => e.Seller)
+                .HasForeignKey(e => e.SellerID)
                 .WillCascadeOnDelete(false);
         }
     }
