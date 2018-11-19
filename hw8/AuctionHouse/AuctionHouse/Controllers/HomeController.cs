@@ -34,7 +34,7 @@ namespace AuctionHouse.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult PlaceBid([Bind(Include = "ID,ItemID,BuyerID,Price,TimeStamp")] Bid bid)
+        public ActionResult PlaceBid([Bind(Include = "ID,ItemID,BuyerID,Price")] Bid bid)
         {
             if (ModelState.IsValid)
             {

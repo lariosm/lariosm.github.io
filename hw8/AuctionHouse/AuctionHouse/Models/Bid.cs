@@ -17,7 +17,7 @@ namespace AuctionHouse.Models
         [Required]
         public int Price { get; set; }
 
-        public DateTime TimeStamp { get; set; }
+        public DateTime TimeStamp { get; set; } = DateTime.Now;
 
         public virtual Buyer Buyer { get; set; }
 
