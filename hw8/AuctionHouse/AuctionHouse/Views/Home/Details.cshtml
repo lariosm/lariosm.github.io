@@ -1,7 +1,7 @@
 ﻿@model AuctionHouse.Models.Item
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Listing details";
 }
 
 <div class="container">
@@ -43,10 +43,27 @@
                 <img src="https://via.placeholder.com/175" class="d-block mx-auto" />
             </div>
         </div>
-        <div class="row">
 
+        <br />
+
+        <div class="row">
+            <div class="col-sm-10">
+                <h5>Bids on this item</h5>
+            </div>
+            <div class="col-sm-2">
+                @Html.ActionLink("Place a bid", "PlaceBid", "Home", null, new { @class = "btn btn-secondary" })
+            </div>
         </div>
+
+        <br />
+
+        <table class="table">
+            <!--Bid items to append here-->
+        </table>
+
+        <br />
+
         <p>
-            @Html.ActionLink("Return to listings", "Index", "Items", null, new { @class = "btn btn-secondary" })
+            @Html.ActionLink("Return to listings", "Listings", "Home", null, new { @class = "btn btn-secondary" })
         </p>
 </div>

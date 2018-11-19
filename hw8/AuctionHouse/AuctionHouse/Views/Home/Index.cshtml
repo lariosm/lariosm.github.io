@@ -1,14 +1,43 @@
 ﻿@model IEnumerable<AuctionHouse.Models.Bid>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Reginald's Ancient Antiquities Auction House";
 }
 
-<h2 style="text-align: center;">Reginald's Ancient Antiquities Auction House</h2>
+<h2 class="special-title" style="text-align: center;">Reginald's Ancient Antiquities Auction House</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<br />
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Make a listing</h3>
+            <label>
+                Have a piece of valuable history to sell? Click here to create a listing for it.
+            </label>
+            @Html.ActionLink("Create a listing", "Create", "Home", null, new { @class = "btn btn-secondary" })
+        </div>
+        <div class="col-sm-4">
+            <h3>View current listings</h3>
+            <label>
+                Not sure what to bid on? Have a look at the items currently up for auction.
+            </label>
+            @Html.ActionLink("View listings", "Listings", "Home", null, new { @class = "btn btn-secondary" })
+        </div>
+        <div class="col-sm-4">
+            <h3>Place a bid</h3>
+            <label>
+                Own a piece of history today. It all starts with making a bid.
+            </label>
+            @Html.ActionLink("Bid on a item", "PlaceBid", "Home", null, new { @class = "btn btn-secondary" })
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+
+<h5>Top ten most recent bids</h5>
 <table class="table">
     <tr>
         <th>
@@ -23,7 +52,6 @@
         <th>
             Bid placed on
         </th>
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -35,7 +63,7 @@
             @Html.DisplayFor(modelItem => item.Item.Name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Price)
+            @string.Format("{0:C}", item.Price)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.TimeStamp)

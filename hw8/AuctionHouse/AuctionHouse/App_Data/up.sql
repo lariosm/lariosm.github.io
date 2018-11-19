@@ -23,7 +23,7 @@ CREATE TABLE [dbo].[Bids]
 	[ID]			INT IDENTITY (1,1)							NOT NULL	PRIMARY KEY,
 	[ItemID]		INT FOREIGN KEY REFERENCES Items(ID)		NOT NULL,
 	[BuyerID]		INT FOREIGN KEY REFERENCES Buyers(ID)		NOT NULL,
-	[Price]			NVARCHAR(20)								NOT NULL,
+	[Price]			INT											NOT NULL,
 	[TimeStamp]		DATETIME									NOT NULL,
 );
 

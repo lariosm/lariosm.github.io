@@ -17,6 +17,23 @@ textarea {
     max-width: 280px;
 }
 
+td, th {
+    text-align: left;
+    padding: 10px;
+}
+
+tr:nth-child(odd) {
+    background-color: #D3D3D3;
+}
+
+/*Title font*/
+.special-title {
+    font-family: 'Spectral SC', serif;
+    border-bottom: 1px grey solid;
+    /*font-family: 'Vollkorn SC', serif;*/
+}
+
+/*Container styling for all pages*/
 #custom {
     margin-top: 20px;
     background-color: white;

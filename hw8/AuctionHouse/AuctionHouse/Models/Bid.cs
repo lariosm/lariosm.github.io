@@ -15,8 +15,7 @@ namespace AuctionHouse.Models
         public int BuyerID { get; set; }
 
         [Required]
-        [StringLength(20)]
-        public string Price { get; set; }
+        public int Price { get; set; }
 
         public DateTime TimeStamp { get; set; }
 

@@ -1,7 +1,7 @@
 ﻿@model AuctionHouse.Models.Item
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Delete listing";
 }
 
 <div class="container">
@@ -52,7 +52,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-danger" /> 
-            @Html.ActionLink("Cancel", "Index", "Items", null, new { @class = "btn btn-secondary" })
+            @Html.ActionLink("Cancel", "Listings", "Home", null, new { @class = "btn btn-secondary" })
         </div>
         }
     </div>
