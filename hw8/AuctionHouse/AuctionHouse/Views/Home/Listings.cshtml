@@ -8,6 +8,7 @@
     <h2 style="text-align: center;">Current auction items</h2>
     <br />
 
+    @*Displays table of items up for auction*@
     <table class="table table-responsive">
         <tr>
             <th>
@@ -35,6 +36,7 @@
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
                 <td>
+                    @*Dropdown action menu button*@
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Actions

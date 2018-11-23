@@ -12,6 +12,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <dl class="row">
+                    @*Displays item information*@
                     <dt class="col-sm-3">
                         <input type="hidden" id="listing-id" value="@Model.ID">
                         @Html.DisplayNameFor(model => model.Seller.Name):
@@ -40,6 +41,7 @@
                 </dl>
             </div>
 
+            @*Placeholder image for item*@
             <div class="col-sm-6">
                 <img src="https://via.placeholder.com/175" class="d-block mx-auto" />
             </div>
@@ -57,6 +59,7 @@
             </div>
         </div>
 
+        @*Bids table (where bids will show up via JavaScript)*@
         <table class="table">
             <tr>
                 <th>
@@ -68,11 +71,12 @@
             </tr>
         </table>
 
-        <h5 id="message" style="text-align:center"><!--Displays message if there are no bids on this item--></h5>
+        @*Displays message if there are no bids on this item*@
+        <h5 id="message" style="text-align:center"></h5>
         <br />
 </div>
 
-@*Executes JS file on this page*@
+@*JS script to be executed on this page*@
 @section BidScript
 {
     <script type="text/javascript" src="~/Scripts/bids.js"></script>
