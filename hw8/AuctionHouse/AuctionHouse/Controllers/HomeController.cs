@@ -151,6 +151,14 @@ namespace AuctionHouse.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Item item = db.Items.Find(id);
+
+            //Checks if listing has bids on it. By doing so, it prevents an exception from
+            //being raised when deleting a listing because of existing bids on it.
+            if (item.Bids.Any())
+            {
+                //If so, remove all bids from this listing
+                db.Bids.Where(i => i.ItemID == id).ToList().ForEach(bidItem => db.Bids.Remove(bidItem));
+            }
             db.Items.Remove(item);
             db.SaveChanges();
             return RedirectToAction("Listings");
