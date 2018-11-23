@@ -11,10 +11,10 @@
     <table class="table table-responsive">
         <tr>
             <th>
-                Seller
+                @Html.DisplayNameFor(model => model.Seller.Name)
             </th>
             <th>
-                Item
+                @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Description)
@@ -43,6 +43,7 @@
                             @Html.ActionLink("Edit listing", "Edit", new { id = item.ID }, new { @class = "dropdown-item" })
                             @Html.ActionLink("View listing", "Details", new { id = item.ID }, new { @class = "dropdown-item" })
                             @Html.ActionLink("Delete listing", "Delete", new { id = item.ID }, new { @class = "dropdown-item" })
+                            @Html.ActionLink("Place bid", "PlaceBid", null, new { @class = "dropdown-item" })
                         </div>
                     </div>
                 </td>

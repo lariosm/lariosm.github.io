@@ -2,6 +2,7 @@ namespace AuctionHouse.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -16,13 +17,14 @@ namespace AuctionHouse.Models
 
         public int ID { get; set; }
 
-        [Required]
+        [Required, DisplayName("Item")]
         [StringLength(100)]
         public string Name { get; set; }
 
         [Required]
         public string Description { get; set; }
 
+        [DisplayName("Seller")]
         public int SellerID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

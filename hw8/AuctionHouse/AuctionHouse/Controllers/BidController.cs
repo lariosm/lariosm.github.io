@@ -24,8 +24,8 @@ namespace AuctionHouse.Controllers
         {
             //Gets all bids associated with the specified item ID
             var bids = db.Bids.Where(b => b.ItemID == id)
-                              .Select(i => new { Buyer = i.Buyer.Name, Amount = i.Price, TimePlaced = i.TimeStamp })
-                              .OrderByDescending(b => b.TimePlaced)
+                              .Select(i => new { Buyer = i.Buyer.Name, Amount = i.Price })
+                              .OrderByDescending(b => b.Amount)
                               .ToList();
 
             return Json(bids, JsonRequestBehavior.AllowGet); //Returns bid list in JSON format

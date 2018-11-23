@@ -2,6 +2,7 @@ namespace AuctionHouse.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -16,7 +17,7 @@ namespace AuctionHouse.Models
 
         public int ID { get; set; }
 
-        [Required]
+        [Required, DisplayName("Seller")]
         [StringLength(30)]
         public string Name { get; set; }
 
