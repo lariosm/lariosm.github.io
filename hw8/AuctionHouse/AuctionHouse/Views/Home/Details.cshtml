@@ -5,7 +5,7 @@
 }
 
 <div class="container">
-    <h2>Details</h2>
+    <h2>Listing details</h2>
 
         <h4>@Html.DisplayFor(model => model.Name)</h4>
         <hr />
@@ -13,6 +13,7 @@
             <div class="col-sm-6">
                 <dl class="row">
                     <dt class="col-sm-3">
+                        <input type="hidden" id="listing-id" value="@Model.ID">
                         Seller:
                     </dt>
 
@@ -21,7 +22,7 @@
                     </dd>
 
                     <dt class="col-sm-3">
-                        Item name:
+                        @Html.DisplayNameFor(model => model.Name)
                     </dt>
 
                     <dd class="col-sm-9">
@@ -55,11 +56,18 @@
             </div>
         </div>
 
-        <br />
-
         <table class="table">
-            <!--Bid items to append here-->
+            <tr>
+                <th>
+                    Bidder
+                </th>
+                <th>
+                    Bid amount
+                </th>
+            </tr>
         </table>
+
+        <h5 id="message" style="text-align:center"><!--Displays message if there are no bids on this item--></h5>
 
         <br />
 
@@ -67,3 +75,8 @@
             @Html.ActionLink("Return to listings", "Listings", "Home", null, new { @class = "btn btn-secondary" })
         </p>
 </div>
+
+@section BidScript
+{
+    <script type="text/javascript" src="~/Scripts/bids.js"></script>
+}

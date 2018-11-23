@@ -60,14 +60,24 @@
             @Html.DisplayFor(modelItem => item.Buyer.Name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Item.Name)
+            @Html.ActionLink(item.Item.Name, "Details", new { id = item.ItemID })
         </td>
         <td>
-            @string.Format("{0:C}", item.Price)
+            @String.Format("{0:C}", item.Price)
         </td>
+
+        @if(item.TimeStamp.Date == DateTime.Today)
+        {
+        <td>
+            @String.Format("{0:T}", item.TimeStamp)
+        </td>
+        }
+        else
+        {
         <td>
             @Html.DisplayFor(modelItem => item.TimeStamp)
         </td>
+        }
     </tr>
 }
 

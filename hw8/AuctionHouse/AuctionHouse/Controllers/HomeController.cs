@@ -17,7 +17,9 @@ namespace AuctionHouse.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            var bids = db.Bids.Include(b => b.Buyer).Include(b => b.Item);
+            var bids = db.Bids.OrderByDescending(b => b.TimeStamp)
+                              .Take(10);
+
             return View(bids.ToList());
         }
 
