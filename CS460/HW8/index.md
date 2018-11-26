@@ -23,4 +23,4 @@ This assignment was created on ASP.NET MVC using SQL scripts (which I then gener
 
 [![Video demo](https://mlarios1.github.io/mlarios1.github.io/CS460/HW8/Website.PNG)](https://www.youtube.com/watch?v=hNpbzTOmSiQ)
 
-_NOTE: I apologize for any lag you might see in the video. I had no idea I was recording at 60 FPS until I played back the video. Thought I'd put it out there._
+_NOTE: I apologize for any lag you might see in the video. I had no idea I was recording at 60 FPS until I played it. Thought I'd put it out there._
