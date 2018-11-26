@@ -6,7 +6,7 @@ For our final assignment this term, we were asked to deploy our finished [Homewo
 
 * Assignment page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW9_1819.html)
 * Deployed website on Microsoft Azure: [http://reginalds.azurewebsites.net/](http://reginalds.azurewebsites.net/)
-* Video demo link: **TBA**
+* Video demo link: [https://www.youtube.com/watch?v=hNpbzTOmSiQ](https://www.youtube.com/watch?v=hNpbzTOmSiQ)
 
 ## Step 1: Create a Resource Group
 
@@ -68,6 +68,8 @@ At this stage, I've successfully published my website to the cloud. All that's l
 
 _Demo of video:_
 
-> **Video in progress... Check back soon.**
+[![Video demo](https://mlarios1.github.io/mlarios1.github.io/CS460/HW8/Website.PNG)](https://www.youtube.com/watch?v=hNpbzTOmSiQ)
+
+_NOTE: I apologize for any lag you might see in the video. I had no idea I was recording at 60 FPS until I played it. Thought I'd put it out there._
 
 Also, if you'd like, you can visit my website at [http://reginalds.azurewebsites.net/](http://reginalds.azurewebsites.net/) and play around with it.
