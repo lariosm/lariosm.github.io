@@ -9,7 +9,7 @@ In keeping in line with requirement 8 on the assignment page regarding portfolio
 * Assignment page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW8_1819.html)
 * Code repository referencing this work can be found [here](https://github.com/mlarios1/CS460/tree/master/hw8)
 * Clone repo link: [https://github.com/mlarios1/CS460.git](https://github.com/mlarios1/CS460.git)
-* Video demo link: _In progress... Check back soon_
+* Video demo link: [https://www.youtube.com/watch?v=hNpbzTOmSiQ](https://www.youtube.com/watch?v=hNpbzTOmSiQ)
 
 ## Overview
 
@@ -21,4 +21,6 @@ This assignment was created on ASP.NET MVC using SQL scripts (which I then gener
 
 ## Demo of Final Product
 
-> In progress... Check back soon.
+[![Video demo](https://mlarios1.github.io/mlarios1.github.io/CS460/HW8/Website.PNG)](https://www.youtube.com/watch?v=hNpbzTOmSiQ)
+
+_NOTE: I apologize for any lag you might see in the video. I had no idea I was recording at 60 FPS until I played back the video. Thought I'd put it out there._
