@@ -21,8 +21,8 @@ All the code referenced is for the CS46X Software Engineering course sequence an
 * [Homework 9](https://mlarios1.github.io/mlarios1.github.io/CS460/HW9/): MVC Application (Cloud deployment)
 
 ### Notes for Final:
-* Generating models from database: [https://mlarios1.github.io/mlarios1.github.io/Notes/genmodels.md](https://mlarios1.github.io/mlarios1.github.io/Notes/genmodels.md)
-* Generating Controllers and Views from model: [https://mlarios1.github.io/mlarios1.github.io/Notes/gencontroller.md](https://mlarios1.github.io/mlarios1.github.io/Notes/gencontroller.md)
+* Generating models from database: [https://mlarios1.github.io/mlarios1.github.io/Notes/genmodels](https://mlarios1.github.io/mlarios1.github.io/Notes/genmodels)
+* Generating Controllers and Views from model: [https://mlarios1.github.io/mlarios1.github.io/Notes/gencontroller](https://mlarios1.github.io/mlarios1.github.io/Notes/gencontroller)
 * Quick instructions to deploy to Azure: _**Coming soon...**_
 * Bootstrap 3.3 docs: [https://getbootstrap.com/docs/3.3/css/](https://getbootstrap.com/docs/3.3/css/)
 * jQuery Cheat Sheet: [https://oscarotero.com/jquery/](https://oscarotero.com/jquery/)
