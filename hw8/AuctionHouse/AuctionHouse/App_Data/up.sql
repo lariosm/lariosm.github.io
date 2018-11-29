@@ -1,34 +1,46 @@
 --Sellers table
 CREATE TABLE [dbo].[Sellers]
 (
-	[ID]	INT IDENTITY (1,1)	NOT NULL	PRIMARY KEY,
-	[Name]	NVARCHAR(30)		NOT NULL
+	[ID]	INT IDENTITY (1,1)	NOT NULL,
+	[Name]	NVARCHAR(30)		NOT NULL,
+
+	CONSTRAINT [PK_dbo.Sellers] PRIMARY KEY CLUSTERED (ID ASC),
 );
 
 --Buyers table
 CREATE TABLE [dbo].[Buyers]
 (
-	[ID]	INT IDENTITY (1,1)	NOT NULL	PRIMARY KEY,
-	[Name]	NVARCHAR(30)		NOT NULL
+	[ID]	INT IDENTITY (1,1)	NOT NULL,
+	[Name]	NVARCHAR(30)		NOT NULL,
+
+	CONSTRAINT [PK_dbo.Buyers] PRIMARY KEY CLUSTERED (ID ASC),
 );
 
 --Items table
 CREATE TABLE [dbo].[Items]
 (
-	[ID]			INT IDENTITY (1001,1)						NOT NULL	PRIMARY KEY,
+	[ID]			INT IDENTITY (1001,1)						NOT NULL,
 	[Name]			NVARCHAR(100)								NOT NULL,
 	[Description]	NVARCHAR(MAX)								NOT NULL,
-	[SellerID]		INT FOREIGN KEY REFERENCES Sellers(ID)		NOT NULL
+	[SellerID]		INT											NOT NULL,
+
+	CONSTRAINT [PK_dbo.Items] PRIMARY KEY CLUSTERED (ID ASC),
+	CONSTRAINT [FK_dbo.Items] FOREIGN KEY (SellerID) REFERENCES [dbo].[Sellers] (ID)
 );
 
 --Bids table
 CREATE TABLE [dbo].[Bids]
 (
-	[ID]			INT IDENTITY (1,1)							NOT NULL	PRIMARY KEY,
-	[ItemID]		INT FOREIGN KEY REFERENCES Items(ID)		NOT NULL,
-	[BuyerID]		INT FOREIGN KEY REFERENCES Buyers(ID)		NOT NULL,
+	[ID]			INT IDENTITY (1,1)							NOT NULL,
+	[ItemID]		INT											NOT NULL,
+	[BuyerID]		INT											NOT NULL,
 	[Price]			INT											NOT NULL,
 	[TimeStamp]		DATETIME									NOT NULL,
+
+	CONSTRAINT [PK_dbo.Bids] PRIMARY KEY CLUSTERED (ID ASC),
+	CONSTRAINT [FK_dbo.Bids] FOREIGN KEY (ItemID) REFERENCES [dbo].[Items] (ID),
+	CONSTRAINT [FK2_dbo.Bids] FOREIGN KEY (BuyerID) REFERENCES [dbo].[Buyers] (ID),
+
 );
 
 --Seller seed data
