@@ -21,11 +21,13 @@ All the code referenced is for the CS46X Software Engineering course sequence an
 * [Homework 9](https://mlarios1.github.io/mlarios1.github.io/CS460/HW9/): MVC Application (Cloud deployment)
 
 ### Notes for Final:
+* Creating **UP** SQL script with constraints: [https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/App_Data/up.sql](https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/App_Data/up.sql)
+* Creating **DOWN** SQL script: [https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/App_Data/down.sql](https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/App_Data/down.sql)
 * Generating models from database: [https://mlarios1.github.io/mlarios1.github.io/Notes/genmodels](https://mlarios1.github.io/mlarios1.github.io/Notes/genmodels)
 * Generating Controllers and Views from model: [https://mlarios1.github.io/mlarios1.github.io/Notes/gencontroller](https://mlarios1.github.io/mlarios1.github.io/Notes/gencontroller)
 * Quick instructions to deploy to Azure: _**Coming soon...**_
-* Controller to convert LINQ queries to JSON (from HW8): [https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/Controllers/BidController.cs](https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/Controllers/BidController.cs)
-* JavaScript file to display JSON data to view (from HW8): [https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/Scripts/bids.js](https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/Scripts/bids.js)
+* Controller to convert LINQ queries to JSON (**from HW8**): [https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/Controllers/BidController.cs](https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/Controllers/BidController.cs)
+* JavaScript file to display JSON data to view (**from HW8**): [https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/Scripts/bids.js](https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/Scripts/bids.js)
 * Git cheat sheet (PDF): [https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
 * Bootstrap 3.3 docs: [https://getbootstrap.com/docs/3.3/css/](https://getbootstrap.com/docs/3.3/css/)
 * jQuery Cheat Sheet: [https://oscarotero.com/jquery/](https://oscarotero.com/jquery/)
