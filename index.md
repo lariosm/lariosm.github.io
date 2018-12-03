@@ -21,11 +21,10 @@ All the code referenced is for the CS46X Software Engineering course sequence an
 * [Homework 9](https://mlarios1.github.io/mlarios1.github.io/CS460/HW9/): MVC Application (Cloud deployment)
 
 ### Notes for Final:
-* Creating **UP** SQL script with constraints: [https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/App_Data/up.sql](https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/App_Data/up.sql)
-* Creating **DOWN** SQL script: [https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/App_Data/down.sql](https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/App_Data/down.sql)
+* Creating **UP** SQL script with constraints(**from HW8**): [https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/App_Data/up.sql](https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/App_Data/up.sql)
+* Creating **DOWN** SQL script (**from HW8**): [https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/App_Data/down.sql](https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/App_Data/down.sql)
 * Generating models from database: [https://mlarios1.github.io/mlarios1.github.io/Notes/genmodels](https://mlarios1.github.io/mlarios1.github.io/Notes/genmodels)
 * Generating Controllers and Views from model: [https://mlarios1.github.io/mlarios1.github.io/Notes/gencontroller](https://mlarios1.github.io/mlarios1.github.io/Notes/gencontroller)
-* Quick instructions to deploy to Azure: _**Coming soon...**_
 * Controller to convert LINQ queries to JSON (**from HW8**): [https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/Controllers/BidController.cs](https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/Controllers/BidController.cs)
 * JavaScript file to display JSON data to view (**from HW8**): [https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/Scripts/bids.js](https://github.com/mlarios1/CS460/blob/master/hw8/AuctionHouse/AuctionHouse/Scripts/bids.js)
 * Git cheat sheet (PDF): [https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
@@ -34,4 +33,5 @@ All the code referenced is for the CS46X Software Engineering course sequence an
 * Razor Reference Guide: [https://haacked.com/archive/2011/01/06/razor-syntax-quick-reference.aspx/](https://haacked.com/archive/2011/01/06/razor-syntax-quick-reference.aspx/)
 * Data Annotations Reference Guide: [https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netframework-4.7.2](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netframework-4.7.2)
 * Manipulate Strings in JavaScript: [https://www.digitalocean.com/community/tutorials/how-to-index-split-and-manipulate-strings-in-javascript](https://www.digitalocean.com/community/tutorials/how-to-index-split-and-manipulate-strings-in-javascript)
+* DateTime formatting guide: [http://www.csharp-examples.net/string-format-datetime/](http://www.csharp-examples.net/string-format-datetime/)
 * Generate ER Diagram from table: [https://stackoverflow.com/questions/32379038/how-to-generate-entity-relationship-er-diagram-of-a-database-using-microsoft-s](https://stackoverflow.com/questions/32379038/how-to-generate-entity-relationship-er-diagram-of-a-database-using-microsoft-s)
