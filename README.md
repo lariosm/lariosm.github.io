@@ -1,1 +1,1 @@
-This repository serves to host web pages which documents my work referenced here: [https://github.com/mlarios1/CS460](https://github.com/mlarios1/CS460)
+This repository is a collection of all my works I have developed at Western Oregon University, namely, the Software Engineering course sequence.
