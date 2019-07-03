@@ -5,7 +5,7 @@ For our final assignment this term, we were asked to deploy our finished [Homewo
 ## Links
 
 * Assignment page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW9_1819.html)
-* Deployed website on Microsoft Azure: [http://reginalds.azurewebsites.net/](http://reginalds.azurewebsites.net/)
+* Deployed website on Microsoft Azure: _No longer deployed_
 * Video demo link: [https://www.youtube.com/watch?v=hNpbzTOmSiQ](https://www.youtube.com/watch?v=hNpbzTOmSiQ)
 
 ## Step 1: Create a Resource Group
