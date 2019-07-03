@@ -5,8 +5,8 @@ In this week's assignment, we were tasked with using a pre-existing complex data
 ## Links
 
 * Assignment page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW6_1819.html)
-* Code repository referencing this work can be found [here](https://github.com/mlarios1/CS460/tree/master/hw6)
-* Clone repo link: [https://github.com/mlarios1/CS460.git](https://github.com/mlarios1/CS460.git)
+* Code repository referencing this work can be found [here](https://github.com/mlarios1/mlarios1.github.io/tree/master/hw6)
+* Clone repo link: [https://github.com/mlarios1/mlarios1.github.io.git](https://github.com/mlarios1/mlarios1.github.io.git)
 * Video demo link: [https://youtu.be/GMYBfBYZiug](https://youtu.be/GMYBfBYZiug)
 
 ## Step 1: Preparation
@@ -17,7 +17,7 @@ Given how we've been working with ASP.NET MVC for about three weeks now, there w
 
 After spending some time playing with LINQ using LINQPad and receiving guidance from my peers and my professor, I started out by importing the database in Microsoft SQL Server Management Studio and establishing a connection to it to access in Visual Studio. Next, I generated all the models (minus the archives) and placed them in my ```Models``` folder, while placing ```WWIContext.cs``` in to my Data Access Layer (DAL) folder.
 
-[![Solution pane with models](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/model_imports.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/model_imports.PNG)
+[![Solution pane with models](https://mlarios1.github.io/mlarios1.github.io/Logs/HW6/model_imports.PNG)](https://mlarios1.github.io/mlarios1.github.io/Logs/HW6/model_imports.PNG)
 
 ## Step 3: Creating a Serach Engine (Feature #1)
 
@@ -102,7 +102,7 @@ else
 }
 ```
 
-[![Search engine page](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/searchengine.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/searchengine.PNG)
+[![Search engine page](https://mlarios1.github.io/mlarios1.github.io/Logs/HW6/searchengine.PNG)](https://mlarios1.github.io/mlarios1.github.io/Logs/HW6/searchengine.PNG)
 
 ## Step 5: Building the Details Page
 
@@ -170,7 +170,7 @@ Having built the search engine, all that was left to do was build the ```Details
 </div>
 ```
 
-[![Simple details page](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/detailspage.PNG)](https://mlarios1.github.io/mlarios1.github.io/CS460/HW6/detailspage.PNG)
+[![Simple details page](https://mlarios1.github.io/mlarios1.github.io/Logs/HW6/detailspage.PNG)](https://mlarios1.github.io/mlarios1.github.io/Logs/HW6/detailspage.PNG)
 
 ## Step 6: Upgrading the Details Page (Feature #2)
 

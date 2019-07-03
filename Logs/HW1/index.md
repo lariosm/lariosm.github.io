@@ -5,9 +5,9 @@ For this first assignment, we were tasked with creating web pages that conforms 
 ## Links
 
 * Assignment page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW1.html)
-* Demo can be found [here](https://mlarios1.github.io/CS460/hw1/)
-* Code repository referencing this work can be found [here](https://github.com/mlarios1/CS460/tree/master/hw1)
-* Clone repo link: https://github.com/mlarios1/CS460.git
+* Demo can be found [here](https://mlarios1.github.io/hw1/)
+* Code repository referencing this work can be found [here](https://github.com/mlarios1/mlarios1.github.io/tree/master/hw1)
+* Clone repo link: [https://github.com/mlarios1/mlarios1.github.io.git](https://github.com/mlarios1/mlarios1.github.io.git)
 
 ## Step 1: Learning the basics
 
@@ -26,7 +26,7 @@ echo "# testrepo" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/mlarios1/CS460.git
+git remote add origin https://github.com/mlarios1/mlarios1.github.io.git
 git push -u origin master
 ```
 
@@ -146,4 +146,4 @@ Soon after that, I've decided to create a subfolder called ```imgs``` within my 
 
 In the end, through trial and error, I've managed to create a decent-looking website within the given timeframe. It probably wasn't how I envisioned it, but several elements from my sketches were there and I'm happy with it so far.
 
-![gallery page](https://mlarios1.github.io/mlarios1.github.io/CS460/HW1/hw1.png)
+![gallery page](https://mlarios1.github.io/mlarios1.github.io/Logs/HW1/hw1.png)

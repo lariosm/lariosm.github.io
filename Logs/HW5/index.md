@@ -5,8 +5,8 @@ Similar to our last assignment, we were tasked with writing a ASP.NET MVC web ap
 ## Links
 
 * Assignment page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW5_1819.html)
-* Code repository referencing this work can be found [here](https://github.com/mlarios1/CS460/tree/master/hw5)
-* Clone repo link: [https://github.com/mlarios1/CS460.git](https://github.com/mlarios1/CS460.git)
+* Code repository referencing this work can be found [here](https://github.com/mlarios1/mlarios1.github.io/tree/master/hw5)
+* Clone repo link: [https://github.com/mlarios1/mlarios1.github.io.git](https://github.com/mlarios1/mlarios1.github.io.git)
 * Video demo link: [https://youtu.be/DFnHS4PDMIA](https://youtu.be/DFnHS4PDMIA)
 
 ## Step 1: Preparation
@@ -128,7 +128,7 @@ Combined, we have what's known as a GET/POST/Redirect pattern that is commonly u
 
 ## Step 6: Writing views
 
-When I wrote views in the past (see [Homework 4](https://mlarios1.github.io/mlarios1.github.io/CS460/HW4/)), I mostly wrote results using ViewBags. However, in this assignment, we were required to write strongly-typed views. For the most part, my views consisted mostly of lambda functions written in Razor to send or return information. Here's a snippet from my ViewForms page:
+When I wrote views in the past (see [Homework 4](https://mlarios1.github.io/mlarios1.github.io/Logs/HW4/)), I mostly wrote results using ViewBags. However, in this assignment, we were required to write strongly-typed views. For the most part, my views consisted mostly of lambda functions written in Razor to send or return information. Here's a snippet from my ViewForms page:
 
 ```HTML
 @*Table header with generated names from model class*@
