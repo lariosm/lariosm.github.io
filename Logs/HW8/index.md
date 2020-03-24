@@ -7,8 +7,8 @@ In keeping in line with requirement 8 on the assignment page regarding portfolio
 ## Links
 
 * Assignment page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW8_1819.html)
-* Code repository referencing this work can be found [here](https://github.com/mlarios1/mlarios1.github.io/tree/master/hw8)
-* Clone repo link: [https://github.com/mlarios1/mlarios1.github.io.git](https://github.com/mlarios1/mlarios1.github.io.git)
+* Code repository referencing this work can be found [here](https://github.com/lariosm/lariosm.github.io/tree/master/hw8)
+* Clone repo link: [https://github.com/lariosm/lariosm.github.io.git](https://github.com/lariosm/lariosm.github.io.git)
 * Video demo link: [https://www.youtube.com/watch?v=hNpbzTOmSiQ](https://www.youtube.com/watch?v=hNpbzTOmSiQ)
 
 ## Overview
@@ -17,10 +17,10 @@ This assignment was created on ASP.NET MVC using SQL scripts (which I then gener
 
 ## Entity Relationship Diagram
 
-[![ER Diagram](https://mlarios1.github.io/mlarios1.github.io/Logs/HW8/ERDiagram.PNG)](https://mlarios1.github.io/mlarios1.github.io/Logs/HW8/ERDiagram.PNG)
+[![ER Diagram](https://lariosm.github.io/lariosm.github.io/Logs/HW8/ERDiagram.PNG)](https://lariosm.github.io/lariosm.github.io/Logs/HW8/ERDiagram.PNG)
 
 ## Demo of Final Product
 
-[![Video demo](https://mlarios1.github.io/mlarios1.github.io/Logs/HW8/Website.PNG)](https://www.youtube.com/watch?v=hNpbzTOmSiQ)
+[![Video demo](https://lariosm.github.io/lariosm.github.io/Logs/HW8/Website.PNG)](https://www.youtube.com/watch?v=hNpbzTOmSiQ)
 
 _NOTE: I apologize for any lag you might see in the video. I had no idea I was recording at 60 FPS until I played it. Thought I'd put it out there._

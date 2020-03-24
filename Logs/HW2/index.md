@@ -5,9 +5,9 @@ For this second assignment, we were tasked with creating a single web page using
 ## Links
 
 * Assignment page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW2.html).
-* Demo can be found [here](https://mlarios1.github.io/hw2/).
-* Code repository referencing this work can be found [here](https://github.com/mlarios1/mlarios1.github.io/tree/master/hw2).
-* Clone repo link: [https://github.com/mlarios1/mlarios1.github.io.git](https://github.com/mlarios1/mlarios1.github.io.git)
+* Demo can be found [here](https://lariosm.github.io/hw2/).
+* Code repository referencing this work can be found [here](https://github.com/lariosm/lariosm.github.io/tree/master/hw2).
+* Clone repo link: [https://github.com/lariosm/lariosm.github.io.git](https://github.com/lariosm/lariosm.github.io.git)
 
 ## Step 1: Preparation
 
@@ -19,7 +19,7 @@ At this point, I haven't fully mastered JavaScript (and jQuery), but I felt I ha
 
 Keeping in mind I needed to incorporate a few form elements and have it generate a list or table element, I've decided, after a few days, to create some sort of change dispenser, simliar to what you would find at an ATM, or more likely, at a self-checkout kiosk. I had the following design in mind:
 
-![gallery page](https://mlarios1.github.io/mlarios1.github.io/Logs/HW2/hw2_design.jpg)
+![gallery page](https://lariosm.github.io/lariosm.github.io/Logs/HW2/hw2_design.jpg)
 
 Unfortuately, I had to water down the design several times bceause not only was it going to get complicated, but it was something I probably wouldn't be able to finish over the course of the three days I had left to work with.
 
@@ -175,4 +175,4 @@ $('#submit').on('click', function() { //when user clicks "Calculate" button
 ```
 Because we were required to branch off from our master branch, I've created a second branch called ```javascript``` where I would commit all my JavaScript work, while committing all my HTML work back at the ```master``` branch. Eventually, I merged them back under the master branch and confirmed it was still working.
 
-![Web page demo](https://mlarios1.github.io/mlarios1.github.io/Logs/HW2/hw2.png)
+![Web page demo](https://lariosm.github.io/lariosm.github.io/Logs/HW2/hw2.png)

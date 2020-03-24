@@ -5,8 +5,8 @@ For this next assignment, we were tasked with writing a ASP.NET MVC web applicat
 ## Links
 
 * Assignment Page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW4_1819.html)
-* Code repository referencing this work can be found [here](https://github.com/mlarios1/mlarios1.github.io/tree/master/hw4)
-* Clone repo link: [https://github.com/mlarios1/mlarios1.github.io.git](https://github.com/mlarios1/mlarios1.github.io.git)
+* Code repository referencing this work can be found [here](https://github.com/lariosm/lariosm.github.io/tree/master/hw4)
+* Clone repo link: [https://github.com/lariosm/lariosm.github.io.git](https://github.com/lariosm/lariosm.github.io.git)
 
 ## Step 1: Preparation
 
@@ -103,7 +103,7 @@ In addition, I also made a few changes to ```_layout.cshtml```, such as the ```@
 </html>
 ```
 
-[![Homework 4 home page](https://mlarios1.github.io/mlarios1.github.io/Logs/HW4/hw4_home.PNG)](https://mlarios1.github.io/mlarios1.github.io/Logs/HW4/hw4_home.PNG)
+[![Homework 4 home page](https://lariosm.github.io/lariosm.github.io/Logs/HW4/hw4_home.PNG)](https://lariosm.github.io/lariosm.github.io/Logs/HW4/hw4_home.PNG)
 
 ## Step 3: Writing MileConverter using GET
 

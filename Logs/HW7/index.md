@@ -5,8 +5,8 @@ For our next assignment, we were tasked with creating a responsive, single-page 
 ## Links
 
 * Assignment page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW7_1819.html)
-* Code repository referencing this work can be found [here](https://github.com/mlarios1/mlarios1.github.io/tree/master/hw7)
-* Clone repo link: [https://github.com/mlarios1/mlarios1.github.io.git](https://github.com/mlarios1/mlarios1.github.io.git)
+* Code repository referencing this work can be found [here](https://github.com/lariosm/lariosm.github.io/tree/master/hw7)
+* Clone repo link: [https://github.com/lariosm/lariosm.github.io.git](https://github.com/lariosm/lariosm.github.io.git)
 * Video demo link: [https://youtu.be/LYGLfIfKgsE](https://youtu.be/LYGLfIfKgsE)
 
 ## Step 1: Preparation
@@ -69,7 +69,7 @@ Index.cshtml:
     <script src="~/Scripts/giphy.js" type="text/javascript"></script>
 }
 ```
-[![Simple view](https://mlarios1.github.io/mlarios1.github.io/Logs/HW7/view.PNG)](https://mlarios1.github.io/mlarios1.github.io/Logs/HW7/view.PNG)
+[![Simple view](https://lariosm.github.io/lariosm.github.io/Logs/HW7/view.PNG)](https://lariosm.github.io/lariosm.github.io/Logs/HW7/view.PNG)
   
 ## Step 3: Creating and Programming Controllers
 
