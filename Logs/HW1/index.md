@@ -5,9 +5,9 @@ For this first assignment, we were tasked with creating web pages that conforms 
 ## Links
 
 * Assignment page can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW1.html)
-* Demo can be found [here](https://mlarios1.github.io/hw1/)
-* Code repository referencing this work can be found [here](https://github.com/mlarios1/mlarios1.github.io/tree/master/hw1)
-* Clone repo link: [https://github.com/mlarios1/mlarios1.github.io.git](https://github.com/mlarios1/mlarios1.github.io.git)
+* Demo can be found [here](https://lariosm.github.io/hw1/)
+* Code repository referencing this work can be found [here](https://github.com/lariosm/lariosm.github.io/tree/master/hw1)
+* Clone repo link: [https://github.com/lariosm/lariosm.github.io.git](https://github.com/lariosm/lariosm.github.io.git)
 
 ## Step 1: Learning the basics
 
@@ -26,7 +26,7 @@ echo "# testrepo" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/mlarios1/mlarios1.github.io.git
+git remote add origin https://github.com/lariosm/lariosm.github.io.git
 git push -u origin master
 ```
 
