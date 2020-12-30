@@ -1,10 +1,6 @@
 ### Introduction
 
-This page is a collection of all my works I have developed at Western Oregon University, namely, the Software Engineering course sequence.
-
-### About Me
-
-My name is Manuel Larios and I am a Senior-year Computer Science student at [Western Oregon University](http://www.wou.edu/)
+This page is a collection of all my works I have developed at [Western Oregon University](https://www.wou.edu), namely, the Software Engineering course sequence.
 
 ### Code Repository
 All the code referenced is for the CS46X Software Engineering course sequence and is hosted in the following repository: [https://github.com/lariosm/lariosm.github.io](https://github.com/lariosm/lariosm.github.io). Alternatively, you can click the "View on Github" button on top of the page and it'll take you to the same place.
